@@ -7,7 +7,7 @@
 <body>
   <script>
 
-      //Basic functions and variables
+      //Basic functions and variable declarations
 
       function calculateCircumference(radius) {
           const pi = 3.14159;
@@ -136,20 +136,22 @@
       // let numericString = "42";
       // let theAnswer = 42;
       //
-       function dataType(value){
-           return !(isNaN(value) || typeof value === "boolean");
+      // function dataType(value){
+      //     return !(isNaN(value) || typeof value === "boolean");
+      //}
+
+      //function isNumber(value){
+      //    return typeof value === "number";
+      //}
+
+
+      function multiply(value1, value2){
+          if (isNaN(parseFloat(value1)) || isNaN(parseFloat(value2))){
+              return false;
+          } else {
+              return parseFloat(value1) * parseFloat(value2);
+          }
       }
-
-      function isNumber(value){
-          return typeof value === "number";
-      }
-
-
-
-
-
-
-
 
 
   </script>
