@@ -8,7 +8,8 @@
  * Example
  * > sayHello("codeup") // returns "Hello, codeup!"
  */
-  //function sayHello(name){
+
+  // function sayHello(name){
   //   return "Hello, " + name;
   // }
 
@@ -19,14 +20,17 @@
  *
  * console.log 'helloMessage' to check your work
  */
+
  //let helloMessage = sayHello("cesar");
  //console.log("Hello, cesar");
+
 /**
  * TODO:
  * Store your name as a string in a variable named 'myName', and pass that
  * variable to the 'sayHello' function. You should see the same output in the
  * console.
  */
+
  //let myName = sayHello("cesar");
 
 // Don't modify the following line, it generates a random number between 1 and 3
@@ -50,9 +54,22 @@ var random = Math.floor((Math.random() * 3) + 1);
  * different result everytime you refresh the page if you are using the random
  * number)
  */
- function isTwo(number){
-     return true <= 2;
-}
+
+ // function isTwo(x){
+ //     if (x == 2){
+ //     return true;
+ //     }else {
+ //          return false;
+ //    }
+ // };
+
+//  function isTwo(x){
+//      return (x === 2);
+// };
+
+// const isTwo = (x) => x === 2;
+ //console.log(isTwo(random));
+
 /**
  * TODO:
  * Create a function named 'calculateTip' to calculate a tip on a bill at a
@@ -64,15 +81,27 @@ var random = Math.floor((Math.random() * 3) + 1);
  * > calculateTip(0.25, 25.50) // returns 6.375
  * > calculateTip(0.15, 33.42) // returns 5.013
  */
- function calculateTip(tip){
-     return
-}
+
+//  function calculateTip(x, y){
+//      return (x * y);
+// };
+
+/** .toFixed to set decimal place!! */
+
+const calculateTip = (x, y) => (x * y).toFixed(2);
+
+// console.log(calculateTip(.20, 20));
+// console.log(calculateTip(.25, 25.50));
+// console.log(calculateTip(.15, 33.42));
+
 /**
  * TODO:
  * Use prompt and alert in combination with your calculateTip function to
  * prompt the user for the bill total and a percentage they would like to tip,
  * then display the dollar amount they should tip
  */
+
+
 
 /**
  * TODO:

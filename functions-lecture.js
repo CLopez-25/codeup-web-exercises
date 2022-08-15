@@ -9,16 +9,6 @@
 // function sayHello (greeting, name) {
 //     return `${greeting}, ${name}`;
 // }
-// 1. function keyword
-// 2. The name of the function
-// 3. parentheses with zero or more parameters
-// 4. if there is more than one parameter, the list is comma separated
-// 5. curly braces contain the function body
-// 6. the function body contains the code that runs when the function is invoked
-// 7. [optional but common] return statement
-// function sayHello(greeting, name) {
-//    return `${greeting}, ${name}`;
-// }
 
 // Here number has local scope
 // the console.log will result in an error
