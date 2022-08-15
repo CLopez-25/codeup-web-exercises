@@ -101,7 +101,11 @@ const calculateTip = (x, y) => (x * y).toFixed(2);
  * then display the dollar amount they should tip
  */
 
-
+// let totalBill = prompt("What is your bill total?");
+// let tipPercentage = prompt("How much would you like to tip? (Please put tip in decimal value.)");
+// let totalTip = (totalBill * tipPercentage).toFixed(2);
+//
+// alert("Your total bill is " + totalBill + ", your tip will be " + "$" + totalTip);
 
 /**
  * TODO:
@@ -117,3 +121,10 @@ const calculateTip = (x, y) => (x * y).toFixed(2);
  *
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
+
+ function applyDiscount(originalPrice, discountPercent){
+     return (originalPrice - (originalPrice * discountPercent)).toFixed(2);
+};
+ console.log(applyDiscount(50, .25))
+ console.log(applyDiscount(100, .20))
+ console.log(applyDiscount(150,.10))
