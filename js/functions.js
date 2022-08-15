@@ -10,7 +10,7 @@
  */
 
   // function sayHello(name){
-  //   return "Hello, " + name;
+  //   return "Hello, " + name + "!";
   // }
 
 /**
@@ -22,7 +22,7 @@
  */
 
  //let helloMessage = sayHello("cesar");
- //console.log("Hello, cesar");
+ //console.log(helloMessage);
 
 /**
  * TODO:
@@ -31,7 +31,8 @@
  * console.
  */
 
- //let myName = sayHello("cesar");
+ //let myName = "cesar";
+    // console.log(sayHello("cesar"));
 
 // Don't modify the following line, it generates a random number between 1 and 3
 // and stores it in a variable named random
@@ -82,13 +83,13 @@ var random = Math.floor((Math.random() * 3) + 1);
  * > calculateTip(0.15, 33.42) // returns 5.013
  */
 
-//  function calculateTip(x, y){
-//      return (x * y);
+//  function calculateTip(tipPercentage, billTotal){
+//      return (billTotal * tipPercentage);
 // };
 
 /** .toFixed to set decimal place!! */
 
-const calculateTip = (x, y) => (x * y).toFixed(2);
+const calculateTip = (tipPercentage, billTotal) => (tipPercentage * billTotal).toFixed(2);
 
 // console.log(calculateTip(.20, 20));
 // console.log(calculateTip(.25, 25.50));
@@ -123,7 +124,7 @@ const calculateTip = (x, y) => (x * y).toFixed(2);
  */
 
  function applyDiscount(originalPrice, discountPercent){
-     return (originalPrice - (originalPrice * discountPercent)).toFixed(2);
+     return originalPrice - (originalPrice * discountPercent);
 };
  console.log(applyDiscount(50, .25))
  console.log(applyDiscount(100, .20))

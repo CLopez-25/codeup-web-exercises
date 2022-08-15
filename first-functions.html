@@ -108,27 +108,27 @@
       }
       //function upperCase(string){
       //    return string.toUpperCase();
-      //}
+      //};
 
       //console.log(upperCase("Javier"));
 
        // function lowerCase(string){
        //    return string.toLowerCase();
-       // }
+       // };
        //
        // console.log(lowerCase("JAVIER"));
 
       //function trimString(string){
       //    return string.trimStart();
-      //}
+      //};
 
       //function stringLength(string){
       //    return string.length;
-      //}
+      //};
 
       //function indexOfCharacter(char, string) {
       //    return string.indexOf(char);
-      //}
+      //};
 
       // == vs. ===
       //
@@ -136,22 +136,18 @@
       // let numericString = "42";
       // let theAnswer = 42;
       //
-      // function dataType(value){
+      // function isNumber(value){
       //     return !(isNaN(value) || typeof value === "boolean");
-      //}
-
-      //function isNumber(value){
-      //    return typeof value === "number";
-      //}
+      //};
 
 
       function multiply(value1, value2){
-          if (isNaN(parseFloat(value1)) || isNaN(parseFloat(value2))){
+          if (isNumber(parseFloat(value1)) || isNaN(parseFloat(value2))){
               return false;
           } else {
               return parseFloat(value1) * parseFloat(value2);
           }
-      }
+      };
 
 
   </script>
