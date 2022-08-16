@@ -1,4 +1,4 @@
-"use strict";
+
 
 /* ########################################################################## */
 
@@ -21,15 +21,29 @@
  * console.logging the function's return value
  */
 
+// function analyzeColor(color){
+//     if (color === blue){
+//         return "blue is the color of the sky";
+//     } else if (color === red){
+//         return "strawberries are red";
+//     } else if (color === cyan){
+//         return "I don't know that color!";
+//     } else {
+//         return "I don't know anything about that color."
+//     }
+// }
+
 // let colorName = prompt("What color do you want to analyze?");
 //
-// function analyzeColor(colorName){
+// function analyzeColor(colorName) {
 //     if (colorName === "blue") {
-//         alert("blue is the color of the sky");
-//     } else if (colorName === "red"){
-//         alert("strawberries are red");
+//         return alert("blue is the color of the sky");
+//     } else if (colorName === "red") {
+//         return alert("strawberries are red");
+//     } else if (colorName === "cyan") {
+//         return alert("I don't know that color");
 //     } else {
-//         alert("I don't know anything about that color!");
+//         return alert("I don't know anything about that color!");
 //     }
 // };
 // analyzeColor(colorName);
@@ -39,8 +53,10 @@
 // - `colors`: a list of the colors of the rainbow
 // - `randomColor`: contains a single random color value from the list (this
 //                  will contain a different color every time the page loads)
-var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
-var randomColor = colors[Math.floor(Math.random() * colors.length)];
+
+//var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+//var randomColor = colors[Math.floor(Math.random() * colors.length)];
+
 /**
  * TODO:
  * Pass the `randomColor` variable to your 'analyzeColor' function and console.log the results.
@@ -54,16 +70,17 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * Comment out the code above, and refactor your function to use a switch-case statement
  */
 
-// switch(colorName){
-//     case("blue"):
-//         alert("blue is the color of the sky");
-//         break;
-//     case("red"):
-//         alert("strawberries are red");
-//         break;
-//     default:
-//         alert("I don't know anything about that color!");
-//         break;
+// function analyzeColor(colorName) {
+//     switch (colorName) {
+//         case "blue":
+//             return alert("blue is the color of the sky");
+//         case "red":
+//             return alert("strawberries are red");
+//         case "cyan":
+//             return alert("I don't know that color");
+//         default:
+//             return alert("I don't know anything about that color!");
+//     }
 // };
 
 /**
@@ -98,13 +115,44 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * return value.
  */
 
-function calculateTotal(luckyNumber, totalAmount){
-    return ;
-};
+//var luckyNumber = Math.floor(Math.random() * 6);
 
-console.log(calculateTotal(0, 100));
-console.log(calculateTotal(4, 100));
+// function calculateTotal(luckyNumber, total){
+//     switch (luckyNumber) {
+//         case 0:
+//             return total;
+//         case 1:
+//             return total * .9;
+//         case 2:
+//             return total * .75;
+//         case 3:
+//             return total * .65;
+//         case 4:
+//             return total * .5;
+//         case 5:
+//             return 0;
+//     }
+// };
+//
+// console.log(calculateTotal(luckyNumber, 100));
 
+// function calculateTotal(luckyNumber, total){
+//     if (luckyNumber === 0) {
+//         return total;
+//     } else if (luckyNumber === 1){
+//         return total * .1;
+//     } else if (luckyNumber === 2){
+//         return total * .25;
+//     } else if (luckyNumber === 3){
+//         return total * .35;
+//     } else if (luckyNumber === 4){
+//         return total * .5;
+//     } else if (luckyNumber === 5){
+//         return 0;
+//     }
+// }
+
+//console.log(calculateTotal(1, 100));
 
 
 /**
@@ -115,8 +163,14 @@ console.log(calculateTotal(4, 100));
  * and alerts to display to the user what their lucky number was, what their
  * price before the discount was, and what their price after the discount is.
  */
+
 // Generate a random number between 0 and 6
 // var luckyNumber = Math.floor(Math.random() * 6);
+//
+// let bill = prompt("Please enter your bill total:");
+// alert("Your lucky number was " + luckyNumber + "\n" +
+//  "Your price before discount was $" + bill + "\n" +
+//  "Your price after discount is $" + calculateTotal(luckyNumber, bill));
 
 /**
  * TODO:
@@ -136,3 +190,56 @@ console.log(calculateTotal(4, 100));
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
+
+//  function isNumber(value){
+//           return !(isNaN(value) || typeof value === "boolean");
+//  };
+//
+// function oddOrEven(number){
+//     return number % 2 === 0 ? number + " is even." : number + " is odd.";
+// };
+//
+// function numberPlus100(number){
+//     return number + " plus 100 equals " + (number + 100);
+// };
+//
+//
+// function negativeOrPositive(number){
+//    return number < 0 ? number + " is a negative number. " : " is a positive number. ";
+// };
+//
+// function getNumber(){
+//     if (confirm("Do you want to enter a number?")){
+//         return parseFloat(prompt("Enter a number:"));
+//     }
+// };
+//
+// function analyzeNumber(number){
+//     if (number === undefined){
+//         return false;
+//     }
+//     if (isNumber(number)){
+//         alert(oddOrEven(number));
+//         alert(numberPlus100(number));
+//         alert(negativeOrPositive(number));
+//     } else {
+//         alert("Incorrect input data type");
+//     }
+// };
+//
+// analyzeNumber(getNumber());
+//
+// console.log(getNumber());
+//
+// let wantsToEnterANumber = confirm("Do you want to enter a number?");
+// if (wantsToEnterANumber){
+//    let userNumber = parseFloat(prompt("Enter a number"));
+//    if (isNumber(userNumber)){
+//        alert(oddOrEven(userNumber));
+//        alert(numberPlus100(userNumber));
+//        alert(negativeOrPositive(userNumber));
+//        } else {
+//        alert("Incorrect input data type");
+//    }
+// };
+
