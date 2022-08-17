@@ -4,6 +4,7 @@
 //     number *= 2;
 // };
 
+// You can nest if else statements inside the do while loop!!
 let allCones = Math.floor(Math.random() * 51) + 50;
 
 do {
