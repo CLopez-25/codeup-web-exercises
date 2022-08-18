@@ -37,8 +37,8 @@
 // ^ inner loop controls how many number are in the lines
 
 
-for(let count = 100; count >= 5; count -= 5){
-    console.log(count);
-}
+// for(let count = 100; count >= 5; count -= 5){
+//     console.log(count);
+// }
 
 
