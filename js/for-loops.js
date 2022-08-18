@@ -20,7 +20,24 @@
 //     }
 // }
 
-for(let count = 100; count >= 5; count = count - 5){
+// for (let i = 1; i <= 9; i++){
+//     console.log(i.toString().repeat(i));
+// }
+
+// loop within a loop below for the problem above:
+
+// for (let i = 1; i <= 9; i++){
+//     let outputString = "";
+//     for (let count = 0; count < i; count++){
+//         outputString = outputString + i;
+//     }
+//     console.log(outputString);
+// }
+// ^ outer loop is controlling how many lines are running
+// ^ inner loop controls how many number are in the lines
+
+
+for(let count = 100; count >= 5; count -= 5){
     console.log(count);
 }
 
