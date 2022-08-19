@@ -1,71 +1,71 @@
-// // declaring an array literal:
-// // each item in an array is called an element.
-// //index counts at 0/ length starts at 1
-//
- let groceryList = ['bread', 'eggs', 'butter', 'milk'];
-// console.log(groceryList);
-//
-// // looping over an array. Basic case
-//
-// // for (let i = 0; i < groceryList.length; i +=){
-// //     console.log(i);
-// // }
-//
-//
-// //start at zero because the array starts at zero
-// // for(let i = 0; i < groceryList.length; i ++){
-// //     if (i === groceryList.length - 1){
-// //         console.log("I have to buy " + groceryList[i] + ".");
-// //     } else {
-// //         console.log("I have to buy " + groceryList[i] + " and ");
-// //     }
-// // }
-//
-// // i goes next to grocery list so it can go through the entire grocery list in sequence
-//
-// // literal 4 strings, console.log each string
-//
-// //let beachThings = ["ball", "beer", "sand", "water"];
-// // for (let i = 0; i < beachThings.length; i++){
-// //     if (i % 2 === 1){
-// //         console.log(beachThings[i] + " is cool.");
-// //     } else {
-// //         console.log(beachThings[i]);
-// //     }
-// // }
-//
-// // function outputArray(array){
-// //     for (let i = 0; i < array.length; i ++){
-// //         console.log(array[i]);
-// //     }
-// // }
-// // outputArray(beachThings);
-//
-// // FOR EACH ARRAYS:
-// // forEach loop takes an anonymous function
-// // the function we pass to the forEach loop has up to three parameters
-// // THE FIRST PARAMETER REPRESENTS the element in the array
-// // second parameter represents the index (index starts at zero unless you change it)
-// // the third
-// // we are going to pass a function to another
-//
-//
-// let prices = [32.99, 21.99, 6.99, 4.99, 12.99, 8.98, 5.99];
+// // // declaring an array literal:
+// // // each item in an array is called an element.
+// // //index counts at 0/ length starts at 1
 // //
-// // prices.forEach(function(price, index){
-// //     console.log("item number " + (index + 1) + " costs " + price);
-// // });
-//
-groceryList.push("potatoes", "serranos"); // add at the end
-console.log(groceryList);
-groceryList.pop(); // removes last item on the list
-console.log(groceryList);
-//
-// // add or remove from the beginning: shift unshift
-groceryList.unshift("sliced cheddar");
-console.log(groceryList);
-groceryList.shift();
-console.log(groceryList);
+//  let groceryList = ['bread', 'eggs', 'butter', 'milk'];
+// // console.log(groceryList);
+// //
+// // // looping over an array. Basic case
+// //
+// // // for (let i = 0; i < groceryList.length; i +=){
+// // //     console.log(i);
+// // // }
+// //
+// //
+// // //start at zero because the array starts at zero
+// // // for(let i = 0; i < groceryList.length; i ++){
+// // //     if (i === groceryList.length - 1){
+// // //         console.log("I have to buy " + groceryList[i] + ".");
+// // //     } else {
+// // //         console.log("I have to buy " + groceryList[i] + " and ");
+// // //     }
+// // // }
+// //
+// // // i goes next to grocery list so it can go through the entire grocery list in sequence
+// //
+// // // literal 4 strings, console.log each string
+// //
+// // //let beachThings = ["ball", "beer", "sand", "water"];
+// // // for (let i = 0; i < beachThings.length; i++){
+// // //     if (i % 2 === 1){
+// // //         console.log(beachThings[i] + " is cool.");
+// // //     } else {
+// // //         console.log(beachThings[i]);
+// // //     }
+// // // }
+// //
+// // // function outputArray(array){
+// // //     for (let i = 0; i < array.length; i ++){
+// // //         console.log(array[i]);
+// // //     }
+// // // }
+// // // outputArray(beachThings);
+// //
+// // // FOR EACH ARRAYS:
+// // // forEach loop takes an anonymous function
+// // // the function we pass to the forEach loop has up to three parameters
+// // // THE FIRST PARAMETER REPRESENTS the element in the array
+// // // second parameter represents the index (index starts at zero unless you change it)
+// // // the third
+// // // we are going to pass a function to another
+// //
+// //
+// // let prices = [32.99, 21.99, 6.99, 4.99, 12.99, 8.98, 5.99];
+// // //
+// // // prices.forEach(function(price, index){
+// // //     console.log("item number " + (index + 1) + " costs " + price);
+// // // });
+// //
+// groceryList.push("potatoes", "serranos"); // add at the end
+// console.log(groceryList);
+// groceryList.pop(); // removes last item on the list
+// console.log(groceryList);
+// //
+// // // add or remove from the beginning: shift unshift
+// groceryList.unshift("sliced cheddar");
+// console.log(groceryList);
+// groceryList.shift();
+// console.log(groceryList);
 //
 // let indexOfButter = groceryList.indexOf("butter");
 // console.log(indexOfButter);
@@ -134,3 +134,34 @@ console.log(groceryList);
 // console.log(quoteArray);
 // quote = quoteArray.join(' ').toLowerCase();
 // console.log(quote);
+
+// Example for some exercises:
+
+let wishList = [25, 15, 8, 59];
+
+function checkWishListPrices(wishList){
+ for (let i = 0; i < wishList.length; i++){
+  if (wishList[i] > 50){
+   return false;
+     }
+  }
+  return true;
+}
+
+console.log(checkWishListPrices(wishList));
+
+function checkWishListTotal(wishList){
+  let total = 0;
+  for (let i = 0; i < wishList.length; i++){
+   total += wishList[i];
+  }
+  return total <= 100;
+}
+
+console.log(checkWishListTotal(wishList));
+
+function processWishList(wishList, testFunction1, testFunction2){
+ return testFunction1(wishList) && testFunction2(wishList);
+}
+
+console.log(processWishList(wishList, checkWishListPrices, checkWishListTotal));

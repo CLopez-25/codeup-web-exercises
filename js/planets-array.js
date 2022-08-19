@@ -44,3 +44,18 @@
     planets.sort()
     console.log(planets);
 })();
+
+// Javier's Bonus problem:
+
+// function zatannaMagic(string){
+//     let commandArray = string.toLowerCase().split(" ");
+//     for (let i = 0; i < commandArray.length; i++){
+//        commandArray[i] = (commandArray[i].split('').reverse().join(''));
+//     }
+//     let command = commandArray.join(' ') + "!";
+//     return command.charAt(0).toUpperCase() + command.slice(1);
+// }
+
+function Reverser(string){
+    return string.split("").reverse().join("").split(" ").reverse().join(" ");
+}
