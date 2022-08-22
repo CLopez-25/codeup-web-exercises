@@ -160,4 +160,22 @@
      *   `showBookInfo` function.
      */
 
+    function createBook(title, firstName, lastName){
+        return {
+            title: title,
+            author: {
+                firstName: firstName,
+                lastName: lastName
+            }
+        }
+    }
+
+    books.push(createBook("The Great Gatsby", "F. Scott", "Fitzgerald"));
+    books.forEach(function(book, index,){
+        console.log("Book # " + (index + 1));
+        console.log("Title: " + book.title);
+        console.log(`Author:  ${book.author.firstName} ${book.author.lastName}`);
+        console.log("----------")
+    });
+
 })();
