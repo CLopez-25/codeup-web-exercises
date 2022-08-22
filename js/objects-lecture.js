@@ -7,13 +7,15 @@ let currentWeather = {
 }
 // console.log(currentWeather.temp);
 // // this is what .length means^
+
 // // current weather is a reference to the object
+
 // // object is the current weather (inside curly brace)
+
 // console.log(currentWeather.description);
 // console.log(currentWeather.feels_like);
 //
 // console.log(currentWeather["humidity"]);
-//
 // let userChoice = "clouds";
 // console.log(currentWeather[userChoice]);
 // userChoice = "temp";
