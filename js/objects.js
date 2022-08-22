@@ -170,12 +170,24 @@
         }
     }
 
-    books.push(createBook("The Great Gatsby", "F. Scott", "Fitzgerald"));
-    books.forEach(function(book, index,){
-        console.log("Book # " + (index + 1));
+    // books.push(createBook("The Great Gatsby", "F. Scott", "Fitzgerald"));
+    // books.forEach(function(book, index,){
+    //     console.log("Book # " + (index + 1));
+    //     console.log("Title: " + book.title);
+    //     console.log(`Author:  ${book.author.firstName} ${book.author.lastName}`);
+    //     console.log("----------")
+    // });
+
+    function showBookInfo(book){
         console.log("Title: " + book.title);
         console.log(`Author:  ${book.author.firstName} ${book.author.lastName}`);
-        console.log("----------")
-    });
+        console.log("----------");
+    }
+
+    books.forEach(function (book, index){
+        console.log("Book # " + (index + 1));
+        showBookInfo(book);
+        }
+    )
 
 })();
