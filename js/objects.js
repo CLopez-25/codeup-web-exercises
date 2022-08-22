@@ -11,12 +11,15 @@
      *  > console.log(person.firstName) // "Rick"
      *  > console.log(person.lastName) // "Sanchez"
      */
-    // let person = {
-    //     firstName: "Cesar",
-    //     lastName: "Lopez"
-    // }
-    // console.log(person.firstName);
-    // console.log(person.lastName);
+     // let person = {
+     //     firstName: "Cesar",
+     //     lastName: "Lopez",
+     //         sayHello: function (){
+     //             return `Hello from ${this.firstName} ${this.lastName}`;
+     //         }
+     // }
+     // console.log(person.firstName);
+     // console.log(person.lastName);
 
 
     /**
@@ -28,8 +31,7 @@
      * Example
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
-
-
+    //console.log(person.sayHello());
 
 
     /** TODO:
@@ -46,14 +48,17 @@
      * and console.log the relevant messages for each person
      */
 
-    let shoppers = [
-        {name: 'Cameron', amount: 180},
-        {name: 'Ryan', amount: 250},
-        {name: 'George', amount: 320}
-    ];
-    console.log('Cameron', 180);
-    console.log('Ryan', 250);
-    console.log('George', 320);
+    // let shoppers = [
+    //     {name: 'Cameron', amount: 180},
+    //     {name: 'Ryan', amount: 250},
+    //     {name: 'George', amount: 320}
+    // ];
+    // shoppers.forEach(function(shopper){
+    //     let discount = (shopper.amount > 200 ? shopper.amount * .12 : 0).toFixed(2);
+    //     let total = shopper.amount - discount;
+    //     console.log(`${shopper.name} -- total: ${shopper.amount}, discount: ${discount}, final amount: ${total}`);
+    // });
+
     /** TODO:
      * Create an array of objects that represent books and store it in a
      * variable named `books`. Each object should have a title and an author
@@ -105,9 +110,9 @@
         }
 
     ];
-    console.log(books[2].title);
-    console.log(books[2].author.firstName);
-    console.log(books[2].author.lastName);
+    // console.log(books[2].title);
+    // console.log(books[2].author.firstName);
+    // console.log(books[2].author.lastName);
 
 
     /**
@@ -134,6 +139,13 @@
      *      ---
      *      ...
      */
+
+    books.forEach(function(book, index,){
+        console.log("Book # " + (index + 1));
+        console.log("Title: " + book.title);
+        console.log(`Author:  ${book.author.firstName} ${book.author.lastName}`);
+        console.log("----------")
+    });
 
 
 
