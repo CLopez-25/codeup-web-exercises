@@ -83,9 +83,9 @@ let hourlyWeather = [
 
 // forEach loop with arrow syntax
 //
-// hourlyWeather.forEach(function(forecast =>){
-//     console.log(`At ${forecast.time} the temperature will be ${forecast.temperature} and feel like ${forecast.feels_like}`);
-// });
+// hourlyWeather.forEach(function(forecast =>
+//    console.log(`At ${forecast.time} the temperature will be ${forecast.temperature} and feel like ${forecast.feels_like}`)
+// );
 
 
 
@@ -116,29 +116,98 @@ let texasInfo = [
     }
 ];
 
-console.log("The temperature in " + texasInfo[1].city + " is " + texasInfo[1].currentWeather.temp);
+// logging the temp for houston:
+// console.log("The temperature in " + texasInfo[1].city + " is " + texasInfo[1].currentWeather.temp);
 
 
-//
+
+
+// 'this' will call whatever object it is attached to
+// do not use arrow functions for method definitions
 // let fighter = {
 //     name: "Arata",
 //     hitpoints: 18,
 //     maxDamage: 8,
-//     attack: function (opponent){
-//         console.log(opponent.name + " has " + opponent.hitpoints + " hit points.");
-//         console.log(this.name + " attacks!");
-//         let damage = Math.ceil(Math.random() * this.maxDamage);
-//         opponent.hitpoints -= damage;
-//         console.log(this.name + " does " + damage + " points of damage");
-//         console.log(opponent.name + " now has " + opponent.hitpoints + " hit points.");
 //     }
-// }
-//
 //
 // let monster = {
 //     name: "Goblin",
 //     hitpoints: 8,
-//     maxDamage: 6
+//     maxDamage: 6,
 // }
-//
-// // this is an object calling a function^^
+
+    //let's create a controller object to handle anything players or game objects do that affects the state of the game.
+    // The controller might handle taking user input and calculating the input's effect on the game.
+
+let controller = {
+    attack: function(attacker, defender){
+        let defenderHPBeforeAttack = defender.hitPoints;
+        let damage = Math.ceil(Math.random() * attacker.maxDamage);
+        defender.hitPoints -= damage;
+        view.displayAttackResults(attacker, defender, defenderHPBeforeAttack, damage);
+    }
+}
+
+// The view object handles output
+
+let view = {
+    displayAttackResults: function(attacker, defender, defenderHPBeforeAttack, damage){
+        console.log(`${defender.name} has ${defenderHPBeforeAttack} hit points`);
+        console.log(attacker.name + " attacks!");
+        console.log(`${attacker.name} does ${damage} hit points of damage!`);
+        console.log(`${defender.name} now has ${defenderHPBeforeAttack - damage} hit points.`);
+        console.log("-----------------");
+    }
+}
+
+let model = {
+    fighter: {
+        name: "Arata",
+        hitPoints: 18,
+        maxDamage: 8
+    },
+
+    monster: {
+        name: "Goblin",
+        hitPoints: 8,
+        maxDamage: 6
+    }
+}
+
+// fighter.attack(monster);
+// fighter["attack"](monster);
+
+controller.attack(model.fighter, model.monster);
+controller.attack(model.monster, model.fighter);
+
+
+
+// Creating objects:
+// define an empty object and create properties dynamically
+let goblin = {}
+goblin.name = "Goblin";
+
+//create a function that returns onjects
+
+function makeMonster(name, hitPoints, maxDamage){
+    return {
+        name: name,
+        hitPoints: hitPoints,
+        maxDamage: maxDamage
+    }
+}
+
+//model.hobgoblin = makeMonster("Hobgoblin", 11, 11);
+//controller.attack(model.hobgoblin, model.fighter);
+
+//use an object constructor
+
+function Monster(name, hitPoints, maxDamage){
+    this.name = name;
+    this.hitPoints = hitPoints;
+    this.maxDamage = maxDamage;
+}
+
+model.hobgoblinCaptain = new Monster("Hobgoblin Captain", 39, 14);
+controller.attack(model.hobgoblinCaptain, model.fighter);
+
