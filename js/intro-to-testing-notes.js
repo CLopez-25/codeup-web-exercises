@@ -4,7 +4,7 @@
 // translate plain english into jasmine specs(expectation)
 // expectation has two parts an assertion and a matcher
 // expect is the assertion/ toBe-not.ToBe is a matcher
-//
+// should want to start with "should be a defined function"
 //
 //
 //
