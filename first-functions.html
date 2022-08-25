@@ -136,9 +136,9 @@
       // let numericString = "42";
       // let theAnswer = 42;
       //
-      // function isNumber(value){
-      //     return !(isNaN(value) || typeof value === "boolean");
-      //};
+      function isNumber(value){
+          return !(isNaN(value) || typeof value === "boolean" || value === null);
+      };
 
 
       function multiply(value1, value2){
