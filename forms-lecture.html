@@ -11,9 +11,20 @@
   </style>
 </head>
 <body>
-    <form>
+    <form method="GET" action="https://request-inspector.glitch.me">
         <label for ="username">Username:</label>
-        <input type="text" id="username">
+        <input type="text" name="username" id="username"><br>
+        <br>
+        <input type="submit">
+    </form>
+    <form method="GET" action="https://request-inspector.glitch.me">
+        <label for="streetAddress">Street Address:</label>
+        <input type="text" name="streetAddress" id="streetAddress"><br>
+        <br>
+        <label for="city">City:</label>
+        <input type="text" name="city" id="city"><br>
+        <br>
+        <input type="submit" value="Submit">
     </form>
 
 </body>
@@ -21,4 +32,9 @@
 
 <!--MAKE SURE YOU USE LABEL TAGS FOR YOUR LABELS
 DO NOT PUT YOUR INPUTS INSIDE YOUR LABELS EITHER
-A LABEL CAN BE INSIDE A PARAGRAPH-->
+A LABEL CAN BE INSIDE A PARAGRAPH
+SAY REPLACED ELEMENTS WHEN TALKING ABOUT VOID ELEMENTS
+
+"get" method will show up on the url/ "post" method will not
+
+-->
