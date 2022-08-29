@@ -8,6 +8,9 @@
       background-color: #040844;
       color: white;
     }
+    a {
+        color: white;
+    }
   </style>
 </head>
 <body>
@@ -26,7 +29,18 @@
         <br>
         <input type="submit" value="Submit">
     </form>
+    <form method="POST" action="https://request-inspector.glitch.me">
+        <h3>Marvel or DC?</h3>
+        <label for="marvel">Marvel</label>
+        <input type="radio" name="marvelOrDc" value="Marvel" id="marvel"><br>
+        <label for="dc">DC</label>
+        <input type="radio" name="marvelOrDc" value="DC" id="dc"><br>
+        <br>
+        <input type="submit" value="Submit">
 
+    </form>
+    <br>
+    <a href="https://request-inspector.glitch.me?username=jojo&streetAddress=678+Main+Street&city=San+Antonio">Send Request</a>
 </body>
 </html>
 
