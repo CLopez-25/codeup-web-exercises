@@ -11,6 +11,9 @@
     a {
         color: white;
     }
+    textarea {
+        resize: none;
+    }
   </style>
 </head>
 <body>
@@ -19,8 +22,11 @@
         <label for ="username">Username:</label>
         <input type="text" name="username" id="username"><br>
         <br>
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password"><br>
         <input type="submit">
     </form>
+                    <!-- Address -->
     <form method="GET" action="https://request-inspector.glitch.me">
         <label for="streetAddress">Street Address:</label>
         <input type="text" name="streetAddress" id="streetAddress"><br>
@@ -61,7 +67,13 @@
             <option value="California">California</option>
         </select>
         <br>
+        <h4><label for="comments">Please Leave Your Comments:</label></h4>
+        <textarea name="comments" id="comments" cols="30" rows="10"></textarea><br>
         <br>
+        <!-- Grab bag -->
+        <input type="date" name="date" id="date">
+
+        <!-- Reset and submit -->
         <input type="reset"><br>
         <br>
         <input type="submit" value="Submit"><br>
