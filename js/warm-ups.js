@@ -148,3 +148,35 @@ const neighborhood3 ={
 
 //whats the cost of each level? level * level * priceOfCan
 
+// i need a total cost accumulator variable and some kind of level variable that keeps track of what level i am on
+// and i need to keep looping until totalCost > bonus
+
+// function beeramid(bonus, price){
+//     let totalCost = 0;
+//     let levels = 0;
+//     while (totalCost < bonus){
+//         totalCost += levels * levels * price;
+//         if (totalCost + ((levels + 1) ** 2 * price) > bonus){break;}
+//         levels++;
+//     }
+//     return levels;
+// }
+
+// Daniel's solution
+// function beeramid (bonus,price){
+//     let total = (bonus - (bonus % price))/price;
+//     let x = 0;
+//     for (let i = 0; total >= ((1 / 3)*(i**3))+((1 / 2)*(i**2))+((1 / 6)*(i)); i++){
+//         x = i;
+//     }
+//     return x;
+// }
+
+function beeramid (bonus,price){
+    let total = (bonus - (bonus % price))/price; //this line tells you how many cans of beer you can buy
+    let x = 0; //accumulator variable
+    for (let i = 0; total >= ((1 / 3)*(i**3))+((1 / 2)*(i**2))+((1 / 6)*(i)); i++){ //solved for a cubic function
+        x = i; //match the acumulator to the number of levels
+    }
+    return x;
+}
