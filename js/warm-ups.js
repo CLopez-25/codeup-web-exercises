@@ -176,7 +176,7 @@ function beeramid (bonus,price){
     let total = (bonus - (bonus % price))/price; //this line tells you how many cans of beer you can buy
     let x = 0; //accumulator variable
     for (let i = 0; total >= ((1 / 3)*(i**3))+((1 / 2)*(i**2))+((1 / 6)*(i)); i++){ //solved for a cubic function
-        x = i; //match the acumulator to the number of levels
+        x = i; //match the accumulator to the number of levels
     }
     return x;
 }
