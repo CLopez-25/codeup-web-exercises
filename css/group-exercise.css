@@ -14,11 +14,21 @@ body{
     background-color: goldenrod;
 }
 
-.fancy-header{
+h1 {
+    color: white;
+}
+
+.fancy-header {
     color: purple;
 }
 
-h1 { text-align: center }
+#header {
+    color: blue;
+}
+
+h1 {
+    text-align: center
+}
 
 #header{
     text-decoration: underline;
