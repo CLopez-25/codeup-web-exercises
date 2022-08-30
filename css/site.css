@@ -30,3 +30,15 @@ li.italic {
     font-size: 1.1rem;
 }
 
+ul li {
+    color: lightblue;
+}
+
+ol li {
+    color: chartreuse;
+}
+
+
+/* ul li or ol li will change only the items of said list
+    margin-left: #vw will indent the page to the left
+ */
