@@ -1,0 +1,15 @@
+#main {
+    box-sizing: border-box;
+    width: 400px;
+    border: 2px solid black;
+    padding: 15px;
+    margin: 15px;
+}
+
+/* padding is additive by default!!
+    content is anything inside the div/box
+    padding will squeeze the content
+    padding adds pixels to the inside of the box
+    margin will add pixels to the outside of the box
+
+     */
