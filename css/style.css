@@ -1,7 +1,9 @@
 body {
     background-color: black;
-    color: black;
+    color: cornflowerblue;
     background-image: url("../img/codeup-logo-with-Codey.png");
+    background-repeat: no-repeat;
+    background-position: top right;
 }
 
 @font-face {
@@ -27,10 +29,11 @@ h1.fancy-header {
 h2 {
     color: blue;
     text-decoration: underline;
+    text-align: center;
 }
 
 
-ul {
+ul li {
     list-style: square;
 }
 
@@ -42,5 +45,17 @@ a:hover,
 a:focus {
     background-color: #fff;
     color: #333;
+}
+
+table {
+    margin: auto;
+    font-size: 1.2rem;
+    border: thin solid cornflowerblue;
+    border-collapse: collapse;
+}
+
+th td {
+    border: thin solid cornflowerblue;
+    padding: 10px;
 }
 
