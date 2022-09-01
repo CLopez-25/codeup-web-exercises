@@ -6,3 +6,42 @@ body, html {
     font-family: Arial, Ubuntu, sans-serif;
 }
 
+.message-info {
+    box-sizing: border-box;
+    color: rgb(57, 50, 144);
+    background-color: rgb(208, 222, 252);
+    margin: 1em;
+    border: 1px rgb(214, 216, 219);
+    border-radius: 7px;
+    padding: 10px;
+}
+
+.message-success {
+    box-sizing: border-box;
+    color: rgb(87, 136, 95);
+    background-color: rgb(215, 242, 220);
+    margin: 1em;
+    border: 1px rgb(214, 216, 219);
+    border-radius: 7px;
+    padding: 10px;
+}
+
+.message-warning {
+    box-sizing: border-box;
+    color: rgb(166, 154, 86);
+    background-color: rgb(253, 251, 206);
+    margin: 1em;
+    border: 1px rgb(214, 216, 219);
+    border-radius: 7px;
+    padding: 10px;
+}
+
+.message-error {
+    box-sizing: border-box;
+    color: rgb(136, 57, 74);
+    background-color: rgb(245, 212, 215);
+    margin: 1em;
+    border: 1px rgb(214, 216, 219);
+    border-radius: 7px;
+    padding: 10px;
+}
