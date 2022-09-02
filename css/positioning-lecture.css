@@ -14,7 +14,7 @@
 }
 
 img[src="img/logo.png"]{
-    position: absolute;
+    position: fixed;
     /* when the positioning is absolute the everything around it ignores that item*/
     top: 25%;
     left: 0;
