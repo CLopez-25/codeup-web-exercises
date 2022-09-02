@@ -13,17 +13,17 @@
     position: relative;
 }
 
-img{
+img[src="img/logo.png"]{
     position: absolute;
     /* when the positioning is absolute the everything around it ignores that item*/
-    top: 0;
+    top: 25%;
     left: 0;
     z-index: -1;
     /* z-index will control what content stacks on what content (- & +) */
 }
 
 img[src*="fish"]{
-    position: absolute;
+    position: fixed;
     left: auto;
     /*auto or unset will work to null out the default value of the element*/
     top: 0;
