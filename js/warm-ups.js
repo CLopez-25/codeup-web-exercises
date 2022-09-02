@@ -188,14 +188,38 @@ let shoes = [
     [0, 23]
 ];
 
-function pairOfShoes(shoes){
-    let firstShoeHasMatch = false;
-    let secondShoeHasMatch = false;
+function pairOfShoes(shoes) {
+    let shoeHasMatch = false;
+    let shoeThatMatches;
+    let newArray;
     for (let i = 1; i < shoes.length; i++){
         if (shoes[i][1] === shoes[0][1]){
-            if (shoes[i][0] !== shoes[0][0])
-            firstShoeHasMatch = true;
+            if (shoes[i][0] !== shoes[0][0]){
+                shoeHasMatch = true;
+                shoes.splice(i, 1);
+                shoes.splice(0,1);
+            }
         }
     }
-    return firstShoeHasMatch;
+    return shoes.length < 2 || !shoeHasMatch ? shoeHasMatch : pairOfShoes(shoes);
 }
+
+//     function pairOfShoes(shoes) {
+//
+//     function findMatch(shoesArray){
+//         for (let i = 1; i < shoes.length; i++){
+//             if (shoes[i][1] === shoes[0][1]){
+//                 if (shoes[i][0] !== shoes[0][0]){
+//                     shoes.splice(i, 1);
+//                     shoes.splice(0,1);
+//                 } return true;
+//             }
+//         }
+//         return false;
+//     }
+//     for (let i = 1; i < shoes.length; i++){
+//         let match = findMatch(shoes[i]);
+//         if (!match){return false;}
+//     }
+//     return true;
+// }
