@@ -1,0 +1,11 @@
+#ipsum {
+}
+
+#ipsum, #quenya, #pirate {
+    border: 1px solid black;
+    width: 25%;
+    float: left;
+    padding: 5px;
+    margin: 1rem;
+}
+
