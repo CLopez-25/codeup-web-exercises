@@ -2,6 +2,7 @@
     border: 1px solid black;
     padding: 5px;
     display: flex;
+    /*height: 900px;*/
     /*height: 70vh;*/
     /*vh = viewport height units
     vw = viewport width units*/
@@ -13,8 +14,11 @@
     flex-flow: row wrap;
     justify-content: flex-start;
     /*    justified content defines the distribution of space along the main axis of the container.*/
-    align-items: baseline;
-/*    baseline are aligned to the bottom of the first line of text pushes the group to the cross start. if you assign it to one it will move all*/
+    align-items: flex-start;
+/*    align items controls the alignment of flex items along the cross axis.*/
+/*    align-content: space-between;*/
+/*    align content is used to control how extra cross-axis space is distributed between and around flex lines. it applies only to containers with multiple flex lines. */
+
 }
 /* white space is the where the main axis and cross axis end.
 cross end is on the right main end is on the bottom so empty space is bottom right.
@@ -30,6 +34,23 @@ flex end will change the white space to the bottom left now*/
     font-size: 150%;
 }
 
-.topMargin {
-    margin-top: 30px;
+/*.topMargin {*/
+/*    margin-top: 30px;*/
+/*}*/
+
+.one {
+    align-self: flex-end;
+    /*order: 1;*/
 }
+.two {align-self: center;
+    order: -1;
+}
+/*.three {flex-grow: 2;}*/
+.four {align-self: center;}
+/*!* flex grow is letting you know that three is taking up twice as much space aas four and five.*!*/
+/*.five {flex-grow: 0.5;}*/
+.six {
+    align-self: flex-end;
+    order: -2;
+}
+/* by default the have an order of 0, if you give it a value of 1 it will go last, if you give it a value of -1 it will come first compared to all others.*/
