@@ -2,8 +2,23 @@
     border: 1px solid black;
     padding: 5px;
     display: flex;
-    flex-direction: column-reverse;
+    /*height: 70vh;*/
+    /*vh = viewport height units
+    vw = viewport width units*/
+/*    flex-direction: column;*/
+/*!*    you can change the display of the divs by doing the instruction above (ex. row-reverse)*!*/
+/*    flex-wrap: wrap;*/
+/*    will wrap this in cross axis*/
+/*    column will want to take up all the space horizontally*/
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    /*    justified content defines the distribution of space along the main axis of the container.*/
+    align-items: baseline;
+/*    baseline are aligned to the bottom of the first line of text pushes the group to the cross start. if you assign it to one it will move all*/
 }
+/* white space is the where the main axis and cross axis end.
+cross end is on the right main end is on the bottom so empty space is bottom right.
+flex end will change the white space to the bottom left now*/
 
 .flex-item {
     border: 1px solid black;
@@ -11,3 +26,10 @@
     padding: 5px;
 }
 
+.upsize {
+    font-size: 150%;
+}
+
+.topMargin {
+    margin-top: 30px;
+}
