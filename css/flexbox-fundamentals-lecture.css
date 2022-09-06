@@ -1,0 +1,13 @@
+.flexbox {
+    border: 1px solid black;
+    padding: 5px;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.flex-item {
+    border: 1px solid black;
+    margin: 5px;
+    padding: 5px;
+}
+
