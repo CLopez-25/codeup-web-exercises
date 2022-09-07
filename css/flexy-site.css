@@ -1,0 +1,38 @@
+body {
+    background-color: #deded8;
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+}
+
+header, article, footer {
+    padding: 0.5em;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #333;
+    color: #ccc;
+    text-align: center;
+}
+
+article {
+    background-color: white;
+}
+
+nav {
+    /*section under the header*/
+    display: flex;
+    background-color: black;
+    padding: 10px 0;
+}
+
+nav a {
+    /* link items*/
+    flex: auto;
+    background-color: #ccc;
+    color: black;
+    text-align: center;
+    margin: 0 5px;
+    padding: 5px 0;
+    text-decoration: none;
+}
+
