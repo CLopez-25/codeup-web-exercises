@@ -38,6 +38,27 @@ ol li {
     color: chartreuse;
 }
 
+div {
+    display: flex;
+}
+
+div section:first-of-type {
+    margin-right: 10px;
+}
+
+div section:nth-of-type(2) {
+    margin: 0 10px;
+}
+
+div section:last-of-type {
+    margin-left: 10px;
+}
+
+/*@media screen and (max-width: 760px){*/
+/*    div {*/
+/*        flex-direction: column;*/
+/*    }*/
+/*}*/
 
 /* ul li or ol li will change only the items of said list
     margin-left: #vw will indent the page to the left
