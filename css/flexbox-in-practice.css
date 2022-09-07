@@ -29,10 +29,30 @@ div {
     justify-content: center;
     align-items: center;
 }
-/*centering it flexbox style is more future proof*/
+/*^^^centering it flexbox style is more future proof^^^*/
 div a {
     display: inline-block;
     text-align: center;
     width: 150px;
     /*margin: auto;*/
 }
+
+/* Cards Below :*/
+main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid darkgray;
+    padding: 5px;
+    width: 300px;
+    margin: 10px;
+}
+
+section p {
+    flex-grow: 1;
+}
+/*^^^ Quick way to organize some cards ^^^*/
