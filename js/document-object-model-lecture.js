@@ -13,7 +13,14 @@ let dontLike = document.getElementById("dontLike");
 let output = `${dontLike.innerHTML} ${document.getElementById(preference).innerHTML} movies`;
 console.log(output);
 
-accessTheDOM.innerHTML = marvel.innerHTML;
+accessTheDOM.innerHTML += marvel.innerHTML;
 
 // ^^ you can reassign the value of the object through the javascript to output in the html ^^
 
+marvel.setAttribute('class', 'hotpink');
+
+let hotPinks = document.getElementsByClassName('hotpink');
+
+for (let i = 0; i < hotPinks.length; i++){
+    hotPinks[i].style.fontSize = '2em';
+}
