@@ -21,6 +21,12 @@
 // theButton.onclick = eventHandler;
 
 // this is the shorthand version:
-document.querySelector("button").addEventListener('click', function (){
-    alert('You clicked me!');
+// document.querySelector("button").addEventListener('click', function (){
+//     alert('You clicked me!');
+// });
+
+
+// MINI EXERCISE:
+document.querySelector("div").addEventListener('click', function (){
+    alert("I am a square");
 });
