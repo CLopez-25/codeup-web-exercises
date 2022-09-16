@@ -33,32 +33,47 @@
 // })
 // and my color is " + window.getComputedStyle(document.querySelector(".square"), null).getPropertyValue('background-color')
 
-let theSquare = document.querySelector('.square');
+// let theSquare = document.querySelector('.square');
+//
+// let theHandler = function(){
+//     // alert("I am a square " + window.getComputedStyle(document.querySelector(".square"), null).getPropertyValue('background-color'));
+// }
+//
+// theSquare.addEventListener('mousemove', function(e){
+//     // console.log(e.target.className);
+//     // let theColor = getComputedStyle(e.target).backgroundColor
+//     // console.log(theColor);
+//     // document.getElementById("anotherSquare").style.backgroundColor = theColor;
+//     alert("Event!");
+// });
+//
+// let theButton = document.querySelector('button');
+//
+// document.querySelector('body').addEventListener('resize', function(event){
+//     alert("Free Flashlights! Just sign up for email newsletter!");
+//     // console.log(getComputedStyle(event.target).backgroundColor);
+// })
+//
+// theButton.onclick = buttonClickFunction;
+//
+// // Get the user input from a form field
+// let formInput = document.getElementById("formInput");
+//
+// formInput.onkeyup = function(){
+//     console.log(formInput.value);
+// }
 
-let theHandler = function(){
-    // alert("I am a square " + window.getComputedStyle(document.querySelector(".square"), null).getPropertyValue('background-color'));
-}
+// let theButton = document.querySelector('button');
+// let counter = 0;
+//
+// let buttonClickFunction = function (){
+//     counter++;
+//     console.log(counter);
+//     if (counter % 2 === 0){
+//         document.querySelector('p').innerText = counter + " is an even number";
+//     } else {
+//         document.querySelector('p').innerText = counter + " is an odd number";
+//     }
+//     theButton
+// }
 
-theSquare.addEventListener('mousemove', function(e){
-    // console.log(e.target.className);
-    // let theColor = getComputedStyle(e.target).backgroundColor
-    // console.log(theColor);
-    // document.getElementById("anotherSquare").style.backgroundColor = theColor;
-    alert("Event!");
-});
-
-let theButton = document.querySelector('button');
-
-document.querySelector('body').addEventListener('resize', function(event){
-    alert("Free Flashlights! Just sign up for email newsletter!");
-    // console.log(getComputedStyle(event.target).backgroundColor);
-})
-
-theButton.onclick = buttonClickFunction;
-
-// Get the user input from a form field
-let formInput = document.getElementById("formInput");
-
-formInput.onkeyup = function(){
-    console.log(formInput.value);
-}
