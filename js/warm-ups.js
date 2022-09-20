@@ -312,6 +312,11 @@
  **/
 
 let address = '8646 Sunny Oaks'
-function convertAddressToObject(addressString){
-    
+function convertAddressToObject(addressString) {
+    return {
+        // if you don't include the second parameter it will go until the end of the string!
+        streetNumber: addressString.substring(0, addressString.indexOf(' ')),
+        streetName: addressString.substring(addressString.indexOf(' ') + 1)
+    }
 }
+
