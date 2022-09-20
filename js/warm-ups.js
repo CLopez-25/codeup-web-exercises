@@ -300,7 +300,7 @@
 // function freeShipping(){
 //
 // }
-
+// ------------------------------------------
 /**
  * Convert Address to Object
  * Write a function named convertAddressToObject that accepts a string that contains a street number (as a string) and street name separated by a space characters, and returns an object with properties streetNumber and streetName.
@@ -311,12 +311,57 @@
  * >> convertAddressToObject('5408 Villa Nueva') ➞ {streetNumber: '5408', streetName: 'Villa Nueva'}
  **/
 
-let address = '8646 Sunny Oaks'
-function convertAddressToObject(addressString) {
-    return {
-        // if you don't include the second parameter it will go until the end of the string!
-        streetNumber: addressString.substring(0, addressString.indexOf(' ')),
-        streetName: addressString.substring(addressString.indexOf(' ') + 1)
-    }
-}
+// let address = '8646 Sunny Oaks'
+// function convertAddressToObject(addressString) {
+//     return {
+//         // if you don't include the second parameter it will go until the end of the string!
+//         streetNumber: addressString.substring(0, addressString.indexOf(' ')),
+//         streetName: addressString.substring(addressString.indexOf(' ') + 1)
+//     }
+// }
+// end of first question solution |||
 
+/**
+ * Count total pets
+ * Write a function named totalPets that accepts an array of objects where each object represents a person, and has a 'pets' property for their owned pets. The function should return the sum of every object's numPets property.
+ *
+ * Examples
+ *
+ * >> totalPets([
+ *       {name: 'Fernando Mendoza', pets: 1},
+ *       {name: 'Douglas Hirsh', pets: 8},
+ *       {name: 'Kenneth Howell', pets: 2}
+ *    ]) ➞ 11
+ */
+
+// let peopleAndPets = [
+//     {name: 'Fernando Mendoza', pets: 1},
+//     {name: 'Douglas Hirsh', pets: 8},
+//     {name: 'Kenneth Howell', pets: 2}
+// ]
+
+// for loop
+// function totalPets(arrayOfObjects) {
+//     let total = 0;
+//     for (let i = 0; i < arrayOfObjects.length; i++){
+//         total += arrayOfObjects[i].pets;
+//     }
+//     return total;
+// }
+
+//forEach
+// function totalPets(arrayOfObjects){
+//     let total = 0;
+//     arrayOfObjects.forEach(function (object){
+//         total += object.pets;
+//     });
+//     return total;
+// }
+
+// .reduce 
+// function totalPets(arrayOfObjects){
+//     return arrayOfObjects.reduce(function(acc, currentValue){
+//         return acc + currentValue.pets;
+//     }, 0)
+// }
+// end of second question solution ||
