@@ -17,15 +17,24 @@ $(function (){
        alert("ooooooooo yeeeeeeeeaaaaahhhhh");
     });
     
-    $(".box").hover(function(){
-       $(this).addClass("hotpink");
-    }, 
-     function(){
-        $(this).removeClass("hotpink");
-     });
+    // $(".box").hover(function(){
+    //    $(this).addClass("hotpink");
+    // }, 
+    //  function(){
+    //     $(this).removeClass("hotpink");
+    //  }); same solution below:
+    
+    $(".box").hover(function (){
+        $(this).toggleClass('hotpink');
+    });
     
     $(document).keydown(function(){
         alert("you just pressed a key down");
     });
+
+    console.log($("div").text());
+    //will show you the displayed text
+    console.log($("div").html());
+    //will show you the text including the tags    
     
 });
