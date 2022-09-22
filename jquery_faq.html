@@ -10,7 +10,7 @@
   </style>
 </head>
 <body>
-  <button>Turn Answers On/Off!</button>
+  <button id="btn1">Turn Answers On/Off!</button>
   <dl>
     <dt>10 FAQ's About National Parks</dt>
     <dt>1.Who is the director of the National Park Service?</dt>
@@ -46,6 +46,9 @@
         <br>FY 2017 Enacted: $2.932 billion</dd>
   </dl>
 
+  <section>
+    <button id="btn2">UL/LI Background Change</button>
+  </section>
   <h3>Denali National Park</h3>
   <ul>
     <li>DNP is home to the highest peak in North America, Denali. Called "The High One" in language of the Athabascan tribe, this towering peak stands at 20,320 feet above sea level.</li>
@@ -71,9 +74,18 @@
   <script src="js/jquery-3.6.1.min.js"></script>
   <script>
     $(function(){
-    $("button").on('click', function (){
+    $("#btn1").on('click', function (){
       $('dd').toggleClass("invisible")
     });
+
+    $("#btn2").on('click', function (){
+      $("body").find("ul").each(function (){
+        $(this).children().last().css('background-color', 'yellow');
+      });
+    });
+
+
+
     });
   </script>
 </body>
