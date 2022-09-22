@@ -6,7 +6,7 @@
 <body>
 
 <h1>My Tool Store</h1>
-
+<button>Refresh</button>
 <table id="products">
     <thead>
         <tr>
@@ -22,18 +22,27 @@
 
 <script src="js/jquery-3.6.1.min.js"></script>
 <script>
-$(function (){
-
-});
-(function() {
+    (function() {
     "use strict";
     // TODO: Create an AJAX GET request for the file under data/inventory.json
+        $.ajax("data/inventory.json").done(function(data) {
+            data.forEach(function (tools){
+                $("#insertProducts").append(
+                    `<tr>
+                        <th>${tools.title}</th>
+                        <th>${tools.quantity}</th>
+                        <th>${tools.price}</th>
+                        <th>${tools.categories}</th>
+                    </tr>`
+                );
+            });
+        });
 
-    // TODO: Take the data from inventory.json and append it to the products table
-    //       HINT: Your data should come back as a JSON object; use console.log() to inspect
-    //             its contents and fields
-    //       HINT: You will want to target #insertProducts for your new HTML elements
-})();
+        // TODO: Take the data from inventory.json and append it to the products table
+        //       HINT: Your data should come back as a JSON object; use console.log() to inspect
+        //             its contents and fields
+        //       HINT: You will want to target #insertProducts for your new HTML elements
+    })();
 </script>
 
 </body>
