@@ -5,7 +5,7 @@
 </head>
 <body>
     <h1>My Tool Store</h1>
-    <button>Refresh</button>
+    <button>Load Inventory</button>
     <table id="products">
         <thead>
             <tr>
@@ -27,11 +27,11 @@
                     data.forEach(function (tools){
                         $("#insertProducts").append(
                             `<tr>
-                            <th>${tools.title}</th>
-                            <th>${tools.quantity}</th>
-                            <th>${tools.price}</th>
-                            <th>${tools.categories}</th>
-                        </tr>`
+                                <td>${tools.title}</td>
+                                <td>${tools.quantity}</td>
+                                <td>$${tools.price}</td>
+                                <td>${tools.categories}</td>
+                            </tr>`
                         );
                     });
                 });
