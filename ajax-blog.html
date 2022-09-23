@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Online Store Blog</title>
+    <title>Ajax Blog</title>
 </head>
 <body>
   <div id="posts">
@@ -12,13 +12,13 @@
   <script>
       $(function (){
          $.ajax("data/blog.json").done(function (data){
-             data.forEach(function (blog){
+             data.forEach(function (blogPost){
                  $("#posts").append(
                      `<div>
-                          <h2>${blog.title}</h2>
-                          <p>${blog.content}</p>
-                          <p>${blog.categories}</p>
-                          <p>${blog.date}</p>
+                          <h2>${blogPost.title}</h2>
+                          <p>${blogPost.content}</p>
+                          <p>${blogPost.categories.join(', ')}</p>
+                          <p>${blogPost.date}</p>
                      </div>`
                  );
              });
