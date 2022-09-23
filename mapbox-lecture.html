@@ -66,15 +66,15 @@
                 const userMarker = new mapboxgl.Marker().setLngLat(coordinates).addTo(map)
             });
         });
-        // let coords;
-        // function getCoords(address,token){
-        //     geocode(address, token).then(function (coordinates){
-        //         console.log(coordinates)
-        //         coords = coordinates;
-        //     });
-        // }
-        // getCoords("600 Navarro st, san antonio", MAPBOX_API_TOKEN);
-        // console.log(coords);
+        let coords;
+        function getCoords(address,token){
+            geocode(address, token).then(function (coordinates){
+                console.log(coordinates)
+                coords = coordinates;
+            });
+        }
+        getCoords("600 Navarro st, san antonio", MAPBOX_API_TOKEN);
+        console.log(coords);
 
     </script>
 </body>

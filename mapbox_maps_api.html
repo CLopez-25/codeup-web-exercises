@@ -31,13 +31,16 @@
         container: 'map', // container ID
         style: 'mapbox://styles/mapbox/streets-v11', // style URL
         center: [-98.48962,  29.42784], // starting position [lng, lat]
-        zoom: 11, // starting zoom
+        zoom: 15, // starting zoom
         projection: 'globe' // display the map as a 3D globe
     });
     map.on('style.load', () => {
         map.setFog({}); // Set the default atmosphere style
     });
-    map.setZoom(20)
+    map.setZoom(10)
+    const chilisMarker = new mapboxgl.Marker()
+        .setLngLat([-98.480749, 29.495268])
+        .addTo(map);
 </script>
 </body>
 </html>
