@@ -8,5 +8,15 @@
   <div id="posts">
 
   </div>
+  <script src="js/jquery-3.6.1.min.js"></script>
+  <script>
+      $(function (){
+         $.ajax("data/blog.json").done(function (data){
+             data.forEach(function (blog){
+                 $("#posts").append(``)
+             });
+         });
+      });
+  </script>
 </body>
 </html>
