@@ -13,7 +13,14 @@
       $(function (){
          $.ajax("data/blog.json").done(function (data){
              data.forEach(function (blog){
-                 $("#posts").append(``)
+                 $("#posts").append(
+                     `<div>
+                          <h2>${blog.title}</h2>
+                          <p>${blog.content}</p>
+                          <p>${blog.categories}</p>
+                          <p>${blog.date}</p>
+                     </div>`
+                 );
              });
          });
       });
