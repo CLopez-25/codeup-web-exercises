@@ -63,7 +63,7 @@
             lat: coordinatesSplit[1]
         };
         const restaurant = new mapboxgl.Marker().setLngLat(newCoords).addTo(map);
-        const restaurantPopUp = new mapboxgl.Popup().setHTML(`<h2>${data.name}</h2><p>${data.description}</p>`);
+        const restaurantPopUp = new mapboxgl.Popup().setHTML(`<h2 class="mt-2">${data.name}</h2><p>${data.description}</p>`);
 
         restaurant.setPopup(restaurantPopUp);
     });

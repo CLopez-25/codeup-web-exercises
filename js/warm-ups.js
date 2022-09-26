@@ -374,6 +374,9 @@
 
 
 // -- Write a function that takes in an input, does something to it, and returns the modified data (do a mathematical operation on it, do a string method to modify it, use an array method to modify an array)
+    function doubleNumber(number){
+        return number * 2;
+}
 
 
 // -- Write a function that takes in an array and returns the array modified in some way -- certain elements removed, certain elements modified in a regular way (example, every numerical value doubled, every string uppercased)
