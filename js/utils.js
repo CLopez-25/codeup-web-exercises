@@ -1,6 +1,6 @@
 function isNumber(value){
     return !(isNaN(value) || typeof value === "boolean" || value === null);
-};
+}
 
 function windCardinalDirection(degrees){
     let cardinalDirection = '';
@@ -60,4 +60,11 @@ function formatTime(timeStamp){
     let seconds = appendLeadingZeroes(dateTime.getSeconds());
     let formattedDateTime = month + " " + day + " " + year + " " + hour + ":" + minutes + ":" + seconds;
     return formattedDateTime;
+}
+
+const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+function namedDayFromDay(timeStamp){
+    let dateTime = new Date(timeStamp * 1000);
+    return daysOfWeek[dateTime.getDay()];
 }
