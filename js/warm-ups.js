@@ -378,6 +378,18 @@
         return number * 2;
 }
 
+    let myArray = [2, 3, 4, 5, 6, 7, 8, 9 , 10];
+    
+    function removeFirstElement(array){
+        array.shift();
+        return array;
+    }
+    // below removes the first element and moves it to the end of the array:
+//     function removeFirstElement(array){
+//     let firstElement = array.shift();
+//     array.push(firstElement);
+//     return array;
+// }
 
 // -- Write a function that takes in an array and returns the array modified in some way -- certain elements removed, certain elements modified in a regular way (example, every numerical value doubled, every string uppercased)
 
@@ -387,9 +399,30 @@
 
 // -- Write a function that accepts a string, breaks down the string into components, and returns an object where each component of the string has become the value of a property
 
+    let cityAndState = "San Antonio, Texas";
+    /* write a function that returns 
+    { city: "San Antonio",
+        state: "Texas"
+    }
+     */
+    
+    function cityStateObjects(){
+        return {
+            city: cityAndState.split(", ")[0],
+            state: cityAndState.split(", ")[1]
+        }
+    }
 
 // -- Write a function that analyzes a string, returning the results of the analysis, example, return the length of the string
-
+    /* this outputs length/first letter/last letter:
+     */
+    function analyzeString(string){
+        return {
+            length:string.length,
+            firstLetter: string.charAt(),
+            lastLetter: string.charAt(string.length - 1)
+        };
+    }
 
 // -- Write a function that analyzes a string, returning an object that contains several properties with information about the string, example, length, firstLetter, and lastLetter properties
 
@@ -441,8 +474,45 @@
      *       }
      *    ]) ➞ [5, 5, 4]
      */
+    
+    const students = [
+        {
+            id: 1,
+            name: "Jacek",
+            notes: [5, 3, 4, 2, 5, 5]
+        },
+        {
+            id: 2,
+            name: "Ewa",
+            notes: [2, 3, 3, 3, 2, 5]
+        },
+        {
+            id: 3,
+            name: "Zygmunt",
+            notes: [2, 2, 4, 4, 3, 3]
+        }
+    ]
 
-
+    // function getStudentTopNotes(arrayOfStudentObjects){
+    //     const topNotes = [];
+    //     arrayOfStudentObjects.forEach(studentObject => {
+    //         topNotes.push(Math.max(...studentObject.notes));
+    //     });
+    //     return topNotes;
+    // }
+    function getStudentTopNotes(arrayOfStudentObjects){
+        let topNotes = [];
+        for (let i = 0; i < arrayOfStudentObjects.length; i ++){
+            let topNote = arrayOfStudentObjects[i].notes[0];
+            for (let j = 0; j < arrayOfStudentObjects[i].notes.length; j ++){
+                if (arrayOfStudentObjects[i].notes[j] > topNote){
+                    topNote = arrayOfStudentObjects[i].notes[j];
+                }
+            }
+            topNotes.push(topNote);
+        }
+        return topNotes;
+    }
 
     /**
      * TODO:
@@ -486,3 +556,26 @@
 // Write a function that accepts an array of bowling scores and returns the highest
 //
 // Write a function that accepts an array of bowling scores and returns true if the highest score is divisible by 3
+// ---------------------------------------
+// removes odd numbers from an array of numbers
+function removeOdds(array){
+    const newArray = [];
+    for (let i = 0; i < array.length; i++){
+        if (array[i] % 2 === 0){
+            newArray.push(array[i]);
+        }
+    }
+    return newArray;
+}
+
+// takes an array of numeric values and returns with all those values doubled
+
+function doubleNumbers(array){
+    const newArray = [];
+    for (let i = 0; i < array.length; i++){
+        if (array[i] * 2){
+            newArray.push(array[i]);
+        }
+    }
+    return newArray;
+}
