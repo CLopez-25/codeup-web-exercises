@@ -607,3 +607,11 @@ function convertNameToObject(string){
         lastName: string.split(' ')[1]
     }
 }
+
+function analyzeWord(word){
+    return {
+        word: word,
+        numberOfLetters: word.length,
+        numberOfVowels: countVowels(word)
+    }
+}
