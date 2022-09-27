@@ -418,9 +418,7 @@
      */
     function analyzeString(string){
         return {
-            length:string.length,
-            firstLetter: string.charAt(),
-            lastLetter: string.charAt(string.length - 1)
+            length:string.length
         };
     }
 
@@ -578,4 +576,34 @@ function doubleNumbers(array){
         }
     }
     return newArray;
+}
+
+function remove9s(array){
+    return array.filter(element => {
+        return element !== 9;
+    });
+}
+
+function average(array){
+    let total = 0;
+    array.forEach(number =>{
+        total += number;
+    });
+    return total/array.length;
+}
+
+function countOdds(array){
+    array.filter(num => num % 2 === 1).length;
+}
+
+function averageSales(arrayOfObjects){
+    let sales = arrayOfObjects.reduce((acc, curr) => acc+curr.sales, 0);
+    return sales/arrayOfObjects.length;
+}
+
+function convertNameToObject(string){
+    return {
+        firstName: string.split(' ')[0],
+        lastName: string.split(' ')[1]
+    }
 }

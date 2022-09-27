@@ -9,6 +9,7 @@
             console.log(data.main.temp); /* this gets the current temp */
             console.log(data.wind.speed);
             // $('body').append(`<p>The current temperature in ${data.name} is ${data.main.temp}</p>`);
+            
         });
     });
 
@@ -29,3 +30,5 @@
         console.log("forecasts:");
         console.log(data); 
     });
+    
+    
