@@ -8,7 +8,7 @@
             console.log(data);
             $('#weather-cards').append(`<div>
                     <div class="card-header">
-                        date will go in here
+                        ${formatTime(data.dt)}
                     </div>
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item">${data.main.temp_max} / ${data.main.temp_min}</li>
