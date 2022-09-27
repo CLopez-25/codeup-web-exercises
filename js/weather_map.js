@@ -6,29 +6,33 @@
             units: "imperial"
         }).done(function (data) {
             console.log(data);
-            console.log(data.main.temp); /* this gets the current temp */
-            console.log(data.wind.speed);
-            // $('body').append(`<p>The current temperature in ${data.name} is ${data.main.temp}</p>`);
-            
+            $('#weather-cards').append(`<div>
+                    <div class="card-header">
+                        date will go in here
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">${data.main.temp_max} / ${data.main.temp_min}</li>
+                        <li class="list-group-item">Humidity: ${data.main.humidity}</li>
+                        <li class="list-group-item">Wind: ${data.wind.speed}</li>
+                        <li class="list-group-item">Pressure: ${data.main.pressure}</li>
+                    </ul>
+                </div>`);
         });
-    });
-
-        // $.get("http://api.openweathermap.org/data/2.5/onecall", {
-        //     APPID: OPEN_WEATHER_APPID,
-        //     lat: 29.423017,
-        //     lon: -98.48527
-        // }).done(function(data) {
-        //     console.log(data);
-        // });
-    
-    $.get("http://api.openweathermap.org/data/2.5/forecast", {
+        
+        $.get("http://api.openweathermap.org/data/2.5/forecast", {
         APPID: OPEN_WEATHER_APPID,
         lat: 29.423017,
         lon: -98.48527,
         units: "imperial"
-    }).done(function(data) {
-        console.log("forecasts:");
+        }).done(function(data) {
         console.log(data); 
+        });
     });
-    
-    
+
+    // $.get("http://api.openweathermap.org/data/2.5/onecall", {
+    //     APPID: OPEN_WEATHER_APPID,
+    //     lat: 29.423017,
+    //     lon: -98.48527
+    // }).done(function(data) {
+    //     console.log(data);
+    // });
