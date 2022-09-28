@@ -24,9 +24,7 @@
         lat: 29.423017,
         lon: -98.48527,
         units: "imperial"
-        }).done(function(data) {
-        console.log(data);
-            function printWeatherCards(data){
+        }).done(function printWeatherCards(data){
                 for(let i=0; i < data.list.length; i++){
                     let seperatedDateAndTime = data.list[i].dt_txt.split(" ");
                     if(i % 8 === 0){
@@ -48,8 +46,7 @@
                `);
                     }
                 }
-            }
-        });
+            });
         
     });
 
