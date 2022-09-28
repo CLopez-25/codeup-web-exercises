@@ -1,12 +1,12 @@
     $(function() {
-        $.get("http://api.openweathermap.org/data/2.5/weather", {
-            APPID: OPEN_WEATHER_APPID,
-            lat: 29.423017,
-            lon: -98.48527,
-            units: "imperial"
-        }).done(function (data) {
-            console.log(data);
-        });
+        // $.get("http://api.openweathermap.org/data/2.5/weather", {
+        //     APPID: OPEN_WEATHER_APPID,
+        //     lat: 29.423017,
+        //     lon: -98.48527,
+        //     units: "imperial"
+        // }).done(function (data) {
+        //     console.log(data);
+        // });
         
         $.get("http://api.openweathermap.org/data/2.5/forecast", {
         APPID: OPEN_WEATHER_APPID,
@@ -18,6 +18,7 @@
         });
             
             function printWeatherCards(data){
+                $("#card").html('');
                 for(let i=0; i < data.list.length; i++){
                     let seperatedDateAndTime = data.list[i].dt_txt.split(" ");
                     if(i % 8 === 0){
@@ -58,7 +59,7 @@
             container: 'map', // container ID
             style: 'mapbox://styles/mapbox/dark-v10', // style URL
             center: [-98.4916, 29.4252], // starting position [lng, lat]
-            zoom: 10, // starting zoom
+            zoom: 3, // starting zoom
             projection: 'globe' // display the map as a 3D globe
         });
         map.on('style.load', () => {
@@ -68,6 +69,7 @@
             e.preventDefault();
             const address = $("#find").val();
             geocode(address, MAPBOX_API_TOKEN).then(function (coordinates){
+                $(".mapboxgl-marker").remove();
                 const userMarker = new mapboxgl.Marker().setLngLat(coordinates).addTo(map)
                 map.setCenter(coordinates);
                 console.log(coordinates);
