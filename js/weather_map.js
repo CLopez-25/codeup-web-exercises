@@ -29,8 +29,8 @@
                     let seperatedDateAndTime = data.list[i].dt_txt.split(" ");
                     if(i % 8 === 0){
                         console.log("inside card for loop if statement" + i);
-                        $(`#card${i/8}`).append(`
-                    <div class="card text-center" style="width: 18rem;">
+                        $(`#card`).append(`
+                    <div class="card text-center col-2 mx-2" style="width: 12.5rem;">
                         <div class="card-header">
                             ${seperatedDateAndTime[0]}
                         </div>
@@ -49,7 +49,7 @@
             });
         
     });
-
+    
     // $.get("http://api.openweathermap.org/data/2.5/onecall", {
     //     APPID: OPEN_WEATHER_APPID,
     //     lat: 29.423017,
