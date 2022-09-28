@@ -73,7 +73,7 @@
             const address = $("#find").val();
             geocode(address, MAPBOX_API_TOKEN).then(function (coordinates){
                 $(".mapboxgl-marker").remove();
-                const userMarker = new mapboxgl.Marker().setLngLat(coordinates).addTo(map)
+                const userMarker = new mapboxgl.Marker({draggable: true}).setLngLat(coordinates).addTo(map)
                 map.setCenter(coordinates);
                 console.log(coordinates);
                 $.get("http://api.openweathermap.org/data/2.5/forecast", {
