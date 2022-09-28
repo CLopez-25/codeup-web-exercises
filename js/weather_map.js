@@ -84,7 +84,26 @@
                 }).done(function(data){
                     console.log("forecasts:")
                     printWeatherCards(data);
+                    $("#currentLocation").html(`Current Location: ${data.city.name}`)
                 })
+            });
+        });
+        
+        map.on('click', (e) => {
+            console.log(`a click happened somewhere ${e.lngLat}`)
+            $(".mapboxgl-marker").remove();
+            const userMarker = new mapboxgl.Marker().setLngLat(e.lngLat).addTo(map);
+            map.setCenter(e.lngLat)
+            map.setZoom(10)
+            $.get("http://api.openweathermap.org/data/2.5/forecast", {
+                APPID: OPEN_WEATHER_APPID,
+                lat: e.lngLat.lat,
+                lon: e.lngLat.lng,
+                units: "imperial"
+            }).done(function (data) {
+                printWeatherCards(data);
+                $("#currentLocation").html(`Current Location: ${data.city.name}`)
+                
             });
         });
     });
