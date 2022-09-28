@@ -24,7 +24,7 @@
                     if(i % 8 === 0){
                         console.log("inside card for loop if statement" + i);
                         $(`#card`).append(`
-                    <div class="card text-center col-2 mx-2" style="width: 12.5rem;">
+                    <div class="card text-center col-3 mx-4" style="width: 12.5rem;">
                         <div class="card-header bg-light">
                             ${seperatedDateAndTime[0]}
                         </div>
@@ -65,6 +65,9 @@
         map.on('style.load', () => {
             map.setFog({}); // Set the default atmosphere style
         });
+        const codeupMarker = new mapboxgl.Marker()
+            .setLngLat([-98.48962, 29.42784])
+            .addTo(map);
         document.getElementById("findButton").addEventListener('click', function (e){
             e.preventDefault();
             const address = $("#find").val();
