@@ -6,17 +6,6 @@
             units: "imperial"
         }).done(function (data) {
             console.log(data);
-            $('#weather-cards').append(`<div>
-                    <div class="card-header">
-                        ${formatTime(data.dt)}
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item text-center">${data.main.temp_max} / ${data.main.temp_min}</li>
-                        <li class="list-group-item">Humidity: ${data.main.humidity}</li>
-                        <li class="list-group-item">Wind: ${data.wind.speed}</li>
-                        <li class="list-group-item">Pressure: ${data.main.pressure}</li>
-                    </ul>
-                </div>`);
         });
         
         $.get("http://api.openweathermap.org/data/2.5/forecast", {
@@ -26,6 +15,29 @@
         units: "imperial"
         }).done(function(data) {
         console.log(data);
+            function printWeatherCards(data){
+                for(let i=0; i < data.list.length; i++){
+                    let seperatedDateAndTime = data.list[i].dt_txt.split(" ");
+                    if(i % 8 === 0){
+                        console.log("inside card for loop if statement" + i);
+                        $(`#card${i/8}`).append(`
+                    <div class="card text-center" style="width: 18rem;">
+                        <div class="card-header">
+                            ${seperatedDateAndTime[0]}
+                        </div>
+                        <img src="http://openweathermap.org/img/w/[icon].png" rel="icon">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Temperature is ${data.list[i].main.temp}</li>
+                            <li class="list-group-item">Feels like ${data.list[i].main.feels_like}</li>
+                            <li class="list-group-item">Description: ${data.list[i].weather[0].description}</li>
+                            <li class="list-group-item">Humidity: ${data.list[i].main.humidity}</li>
+                            <li class="list-group-item">Pressure: ${data.list[i].main.pressure}</li>
+                        </ul>
+                    </div>
+               `);
+                    }
+                }
+            }
         });
         
     });
