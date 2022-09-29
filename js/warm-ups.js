@@ -374,16 +374,16 @@
 
 
 // -- Write a function that takes in an input, does something to it, and returns the modified data (do a mathematical operation on it, do a string method to modify it, use an array method to modify an array)
-    function doubleNumber(number){
-        return number * 2;
-}
-
-    let myArray = [2, 3, 4, 5, 6, 7, 8, 9 , 10];
-    
-    function removeFirstElement(array){
-        array.shift();
-        return array;
-    }
+//     function doubleNumber(number){
+//         return number * 2;
+// }
+//
+//     let myArray = [2, 3, 4, 5, 6, 7, 8, 9 , 10];
+//    
+//     function removeFirstElement(array){
+//         array.shift();
+//         return array;
+//     }
     // below removes the first element and moves it to the end of the array:
 //     function removeFirstElement(array){
 //     let firstElement = array.shift();
@@ -399,28 +399,28 @@
 
 // -- Write a function that accepts a string, breaks down the string into components, and returns an object where each component of the string has become the value of a property
 
-    let cityAndState = "San Antonio, Texas";
+    // let cityAndState = "San Antonio, Texas";
     /* write a function that returns 
     { city: "San Antonio",
         state: "Texas"
     }
      */
     
-    function cityStateObjects(){
-        return {
-            city: cityAndState.split(", ")[0],
-            state: cityAndState.split(", ")[1]
-        }
-    }
+    // function cityStateObjects(){
+    //     return {
+    //         city: cityAndState.split(", ")[0],
+    //         state: cityAndState.split(", ")[1]
+    //     }
+    // }
 
 // -- Write a function that analyzes a string, returning the results of the analysis, example, return the length of the string
     /* this outputs length/first letter/last letter:
      */
-    function analyzeString(string){
-        return {
-            length:string.length
-        };
-    }
+    // function analyzeString(string){
+    //     return {
+    //         length:string.length
+    //     };
+    // }
 
 // -- Write a function that analyzes a string, returning an object that contains several properties with information about the string, example, length, firstLetter, and lastLetter properties
 
@@ -473,23 +473,23 @@
      *    ]) ➞ [5, 5, 4]
      */
     
-    const students = [
-        {
-            id: 1,
-            name: "Jacek",
-            notes: [5, 3, 4, 2, 5, 5]
-        },
-        {
-            id: 2,
-            name: "Ewa",
-            notes: [2, 3, 3, 3, 2, 5]
-        },
-        {
-            id: 3,
-            name: "Zygmunt",
-            notes: [2, 2, 4, 4, 3, 3]
-        }
-    ]
+    // const students = [
+    //     {
+    //         id: 1,
+    //         name: "Jacek",
+    //         notes: [5, 3, 4, 2, 5, 5]
+    //     },
+    //     {
+    //         id: 2,
+    //         name: "Ewa",
+    //         notes: [2, 3, 3, 3, 2, 5]
+    //     },
+    //     {
+    //         id: 3,
+    //         name: "Zygmunt",
+    //         notes: [2, 2, 4, 4, 3, 3]
+    //     }
+    // ]
 
     // function getStudentTopNotes(arrayOfStudentObjects){
     //     const topNotes = [];
@@ -498,19 +498,19 @@
     //     });
     //     return topNotes;
     // }
-    function getStudentTopNotes(arrayOfStudentObjects){
-        let topNotes = [];
-        for (let i = 0; i < arrayOfStudentObjects.length; i ++){
-            let topNote = arrayOfStudentObjects[i].notes[0];
-            for (let j = 0; j < arrayOfStudentObjects[i].notes.length; j ++){
-                if (arrayOfStudentObjects[i].notes[j] > topNote){
-                    topNote = arrayOfStudentObjects[i].notes[j];
-                }
-            }
-            topNotes.push(topNote);
-        }
-        return topNotes;
-    }
+    // function getStudentTopNotes(arrayOfStudentObjects){
+    //     let topNotes = [];
+    //     for (let i = 0; i < arrayOfStudentObjects.length; i ++){
+    //         let topNote = arrayOfStudentObjects[i].notes[0];
+    //         for (let j = 0; j < arrayOfStudentObjects[i].notes.length; j ++){
+    //             if (arrayOfStudentObjects[i].notes[j] > topNote){
+    //                 topNote = arrayOfStudentObjects[i].notes[j];
+    //             }
+    //         }
+    //         topNotes.push(topNote);
+    //     }
+    //     return topNotes;
+    // }
 
     /**
      * TODO:
@@ -555,63 +555,63 @@
 //
 // Write a function that accepts an array of bowling scores and returns true if the highest score is divisible by 3
 // ---------------------------------------
-// removes odd numbers from an array of numbers
-function removeOdds(array){
-    const newArray = [];
-    for (let i = 0; i < array.length; i++){
-        if (array[i] % 2 === 0){
-            newArray.push(array[i]);
-        }
-    }
-    return newArray;
-}
+// // removes odd numbers from an array of numbers
+// function removeOdds(array){
+//     const newArray = [];
+//     for (let i = 0; i < array.length; i++){
+//         if (array[i] % 2 === 0){
+//             newArray.push(array[i]);
+//         }
+//     }
+//     return newArray;
+// }
 
 // takes an array of numeric values and returns with all those values doubled
 
-function doubleNumbers(array){
-    const newArray = [];
-    for (let i = 0; i < array.length; i++){
-        if (array[i] * 2){
-            newArray.push(array[i]);
-        }
-    }
-    return newArray;
-}
-
-function remove9s(array){
-    return array.filter(element => {
-        return element !== 9;
-    });
-}
-
-function average(array){
-    let total = 0;
-    array.forEach(number =>{
-        total += number;
-    });
-    return total/array.length;
-}
-
-function countOdds(array){
-    array.filter(num => num % 2 === 1).length;
-}
-
-function averageSales(arrayOfObjects){
-    let sales = arrayOfObjects.reduce((acc, curr) => acc+curr.sales, 0);
-    return sales/arrayOfObjects.length;
-}
-
-function convertNameToObject(string){
-    return {
-        firstName: string.split(' ')[0],
-        lastName: string.split(' ')[1]
-    }
-}
-
-function analyzeWord(word){
-    return {
-        word: word,
-        numberOfLetters: word.length,
-        numberOfVowels: countVowels(word)
-    }
-}
+// function doubleNumbers(array){
+//     const newArray = [];
+//     for (let i = 0; i < array.length; i++){
+//         if (array[i] * 2){
+//             newArray.push(array[i]);
+//         }
+//     }
+//     return newArray;
+// }
+//
+// function remove9s(array){
+//     return array.filter(element => {
+//         return element !== 9;
+//     });
+// }
+//
+// function average(array){
+//     let total = 0;
+//     array.forEach(number =>{
+//         total += number;
+//     });
+//     return total/array.length;
+// }
+//
+// function countOdds(array){
+//     array.filter(num => num % 2 === 1).length;
+// }
+//
+// function averageSales(arrayOfObjects){
+//     let sales = arrayOfObjects.reduce((acc, curr) => acc+curr.sales, 0);
+//     return sales/arrayOfObjects.length;
+// }
+//
+// function convertNameToObject(string){
+//     return {
+//         firstName: string.split(' ')[0],
+//         lastName: string.split(' ')[1]
+//     }
+// }
+//
+// function analyzeWord(word){
+//     return {
+//         word: word,
+//         numberOfLetters: word.length,
+//         numberOfVowels: countVowels(word)
+//     }
+// }
