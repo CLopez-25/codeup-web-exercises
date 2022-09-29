@@ -88,7 +88,6 @@ $(function () {
         }).done(function (data) {
             printWeatherCards(data);
             $("#currentLocation").html(`Current Location: ${data.city.name}`)
-
         });
     });
 })
