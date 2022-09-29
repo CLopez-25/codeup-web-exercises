@@ -37,6 +37,7 @@ const name = 'Cesar Lopez';
 const email = 'lopez.m.cesar17@gmail.com';
 const languages = ['javascript', 'html', 'css'];
 
+
 // TODO: rewrite the object literal using object property shorthand
 users.push({
   name: name,
@@ -52,6 +53,7 @@ let names = [];
 users.forEach(function(user) {
   return emails.push(user.email);
 });
+
 users.forEach(function(user) {
   return names.push(user.name);
 });
