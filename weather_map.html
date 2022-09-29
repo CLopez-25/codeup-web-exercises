@@ -2,17 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-<!--    <meta name="viewport" content="width-device-width, initial-scale=1">-->
+    <!--    <meta name="viewport" content="width-device-width, initial-scale=1">-->
     <title>Weather Map</title>
     <!-- JavaScript Keys -->
     <script src="js/keys.js"></script>
     <!-- CSS Bootstrap only -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <!-- JavaScript Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+            crossorigin="anonymous"></script>
     <!-- Mapbox API -->
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.js'></script>
-    <link href='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.css' rel='stylesheet' />
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.css' rel='stylesheet'/>
     <!-- Utils Functions -->
 </head>
 <body>
@@ -23,11 +26,11 @@
             <h5 class="navbar-text" style="color: white" id="currentLocation">Current Location: San Antonio</h5>
         </div>
     </nav>
-        <form class="mx-4 mt-2 w-20">
-            <label for="find" class="justify-content-end">Place</label>
-            <input type="text" name="find" id="find" class="my-2 border-light">
-            <button id="findButton" class="bg-primary mx-2" style="color: white">Find</button>
-        </form>
+    <form class="mx-4 mt-2 w-20">
+        <label for="find" class="justify-content-end">Place</label>
+        <input type="text" name="find" id="find" class="my-2 border-light">
+        <button id="findButton" class="bg-primary mx-2" style="color: white">Find</button>
+    </form>
 
     <!-- Section with Cards Divs -->
     <section id="card" class="container mt-4 row mx-auto">
@@ -39,7 +42,6 @@
             <div id='map' class="mx-auto" style="width: 100%; height: 250px"></div>
         </div>
     </div>
-
 <script src="js/jquery-3.6.1.min.js"></script>
 <script src="js/mapbox-geocoder-utils.js"></script>
 <script src="js/weather_map.js"></script>
