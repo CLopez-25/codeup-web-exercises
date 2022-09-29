@@ -9,7 +9,7 @@ $(function () {
         printWeatherCards(data);
     });
     
-    //This is my function for displaying my weather cards with the current weather data inside them
+    //This is my function for displaying my weather cards and icons with the current weather data inside them
     function printWeatherCards(data) {
         $("#card").html('');
         for (let i = 0; i < data.list.length; i++) {
@@ -41,7 +41,7 @@ $(function () {
         container: 'map', // container ID
         style: 'mapbox://styles/mapbox/navigation-night-v1', // style URL
         center: [-98.4916, 29.4252], // starting position [lng, lat]
-        zoom: 3, // starting zoom
+        zoom: 9, // starting zoom
         projection: 'globe' // display the map as a 3D globe
     });
     map.on('style.load', () => {
@@ -79,7 +79,7 @@ $(function () {
         $(".mapboxgl-marker").remove();
         const userMarker = new mapboxgl.Marker({color: 'black', draggable: true}).setLngLat(e.lngLat).addTo(map);
         map.setCenter(e.lngLat)
-        map.setZoom(10)
+        map.setZoom(8)
         $.get("http://api.openweathermap.org/data/2.5/forecast", {
             APPID: OPEN_WEATHER_APPID,
             lat: e.lngLat.lat,
