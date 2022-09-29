@@ -39,10 +39,15 @@ const languages = ['javascript', 'html', 'css'];
 
 
 // TODO: rewrite the object literal using object property shorthand
+// users.push({
+//   name: name,
+//   email: email,
+//   languages: languages
+// });
 users.push({
-  name: name,
-  email: email,
-  languages: languages
+  name,
+  email,
+  languages
 });
 
 // TODO: replace `var` with `let` in the following variable declarations
@@ -50,12 +55,20 @@ let emails = [];
 let names = [];
 
 // TODO: rewrite the following using arrow functions
-users.forEach(function(user) {
-  return emails.push(user.email);
+// users.forEach(function(user) {
+//   return emails.push(user.email);
+// });
+
+users.forEach(user => {
+  emails.push(user.email);
 });
 
-users.forEach(function(user) {
-  return names.push(user.name);
+// users.forEach(function(user) {
+//   return names.push(user.name);
+// });
+
+users.forEach(user => {
+  names.push(user.name)
 });
 
 // TODO: replace `var` with `let` in the following declaration
