@@ -36,3 +36,13 @@ const users = [
     }
 ];
 
+// .filter
+
+let threeLang = users.filter( user => user.languages.length > 2);
+
+// .map
+
+let emails = users.map(user => user.email);
+
+// .reduce
+
