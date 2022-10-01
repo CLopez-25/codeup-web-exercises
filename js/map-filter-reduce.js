@@ -46,3 +46,4 @@ let emails = users.map(user => user.email);
 
 // .reduce
 
+let TotalYearsOfExperience = users.reduce((experience, user) => experience + user.yearsOfExperience, 0) / users.length;
