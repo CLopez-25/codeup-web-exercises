@@ -44,6 +44,14 @@ let threeLang = users.filter( user => user.languages.length > 2);
 
 let emails = users.map(user => user.email);
 
-// .reduce
+// .reduce total and average
 
 let TotalYearsOfExperience = users.reduce((experience, user) => experience + user.yearsOfExperience, 0) / users.length;
+
+// longest email
+
+let longestUserEmail = emails.reduce((a, b) => a.length > b.length ? a : b);
+let longestUEmail = users.reduce((a, b) => {
+    return a.length > b.length ? a : b.email;
+});
+console.log(longestUserEmail, longestUEmail);
