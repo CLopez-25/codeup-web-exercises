@@ -55,3 +55,10 @@ let longestUEmail = users.reduce((a, b) => {
     return a.length > b.length ? a : b.email;
 });
 console.log(longestUserEmail, longestUEmail);
+
+// list of user names in a string
+
+let usersNamesString = users.reduce((acc, user, index) => {
+    return index === 0 ? user.name : acc + ", " + user.name;
+}, "");
+console.log(usersNamesString);
