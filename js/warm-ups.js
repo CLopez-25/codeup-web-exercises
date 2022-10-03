@@ -615,3 +615,21 @@
 //         numberOfVowels: countVowels(word)
 //     }
 // }
+
+
+/*================== DOM WARMUPS ===================================*/
+
+// When the user clicks the button that has the text "Change Heading", the
+// text of the <h1> element changes to read "I pwn the DOM"
+
+// Every time the user enters a character in the input with id "source", that
+// character appears in the <p> element with the id "output"
+
+function changeHeader(){
+    return header.innerHTML = "I pwn the DOM";
+}
+btn.addEventListener('click', changeHeader);
+
+$("#source").on('keyup', function (){
+    $("#output").text($("#source").val());
+});
