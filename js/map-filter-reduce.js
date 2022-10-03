@@ -37,28 +37,41 @@ const users = [
 ];
 
 // .filter
-
 let threeLang = users.filter( user => user.languages.length > 2);
+console.log(threeLang);
 
 // .map
-
 let emails = users.map(user => user.email);
 
 // .reduce total and average
-
-let TotalYearsOfExperience = users.reduce((experience, user) => experience + user.yearsOfExperience, 0) / users.length;
+let totalYearsOfExperience = users.reduce((experience, user) => experience + user.yearsOfExperience, 0) / users.length;
+console.log(totalYearsOfExperience);
 
 // longest email
-
-let longestUserEmail = emails.reduce((a, b) => a.length > b.length ? a : b);
-let longestUEmail = users.reduce((a, b) => {
-    return a.length > b.length ? a : b.email;
+// jason solution:
+let longestEmail = users.reduce((currentLongestEmail, user) => {
+    return currentLongestEmail.length > user.email.length ? currentLongestEmail : user.email;
 });
-console.log(longestUserEmail, longestUEmail);
+//mine:
+// let longestUserEmail = emails.reduce((a, b) => a.length > b.length ? a : b);
+// let longestUEmail = users.reduce((a, b) => {
+//     return a.length > b.length ? a : b.email;
+// });
+// console.log(longestUserEmail, longestUEmail);
 
 // list of user names in a string
-
 let usersNamesString = users.reduce((acc, user, index) => {
     return index === 0 ? user.name : acc + ", " + user.name;
 }, "");
 console.log(usersNamesString);
+
+// Bonus .reduce
+let uniqueLanguages = users.reduce((acc, user) => {
+    user.languages.forEach(function (language){
+        if (!acc.includes(language)){
+            acc.push(language);
+        }
+    });
+    return acc;
+}, []);
+console.log(uniqueLanguages);
