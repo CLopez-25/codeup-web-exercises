@@ -30,5 +30,4 @@ $(function (){
     $("header p").hover(function (){
        $(this).parent().toggleClass("darkMode"); 
     });
-    
 });

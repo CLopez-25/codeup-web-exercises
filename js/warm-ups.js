@@ -624,12 +624,33 @@
 
 // Every time the user enters a character in the input with id "source", that
 // character appears in the <p> element with the id "output"
+//
+// function changeHeader(){
+//     return header.innerHTML = "I pwn the DOM";
+// }
+// btn.addEventListener('click', changeHeader);
+//
+// $("#source").on('keyup', function (){
+//     $("#output").text($("#source").val());
+// });
 
-function changeHeader(){
-    return header.innerHTML = "I pwn the DOM";
-}
-btn.addEventListener('click', changeHeader);
+// When the mouse enters the h2 with the text "Lorem Generator",
+// A paragraph contain lorem appears in the div with the id of loremParagraphs
 
-$("#source").on('keyup', function (){
-    $("#output").text($("#source").val());
+// When the user clicks on the "Hot Pink It" button, all the text in the div with the id of loremParagraphs becomes hotpink if it's black, or black if it's hotpink.
+
+const lorem = "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid assumenda consectetur cumque dignissimos eius, fugit hic ipsa, iste nemo obcaecati pariatur perferendis placeat possimus, praesentium repellendus similique sit ut vero?\n</p>";
+
+$("#loremParagraphs h2").mouseenter(function (){
+    $("#loremParagraphs").append(lorem);
+});
+
+$("#hotPinkIt").on('click', function (){
+    $("#loremParagraphs").toggleClass("hotpink");
+});
+
+$("#blinkPink").on('click', function (){
+    setInterval(function (){
+        $("#loremParagraphs").toggleClass("hotpink");
+    }, 3000);
 });
