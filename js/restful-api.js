@@ -92,3 +92,6 @@ const deleteOptions = {
 }
 
 fetch(booksURL + "/1", deleteOptions).then(getBooks);
+
+// already know how to load all the movies, go to create, then to delete reference the button of the movie to delete it. use the same idea for the edit button.
+
