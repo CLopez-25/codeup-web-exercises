@@ -12,7 +12,7 @@
 // https://glitch.com/continuous-shard-yew
 
 const booksURL = "https://continuous-shard-yew.glitch.me/books"
-const moviesURl = "https://continuous-shard-yew.glitch.me/movies"
+const moviesURL = "https://continuous-shard-yew.glitch.me/movies"
 
 // the R in crud : read
 function getMovies(){
