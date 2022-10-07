@@ -7,91 +7,90 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <!-- JavaScript Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="css/movies-project-cesar.css">
 </head>
 <body>
-<div id="loading">
-</div>
+    <!-- Loading Div -->
+    <div id="loading">
+    </div>
 
+    <!-- Main Header -->
+    <div class="container-fluid">
+        <h1 class="display-4 text-center">Cesar's Featured Movies</h1>
+        <p class="lead">Movie gallery</p>
+    </div>
 
-<div class="container-fluid">
-    <h1 class="display-4 text-center">Cesar's Featured Movies</h1>
-    <p class="lead">Movie gallery</p>
-</div>
-
-
-
-
-<div>
-    <div class="row">
-
-
-        <div class=" card-deck col-6">
-            <main id="container" class="row"></main>
-        </div>
-    <!--- Add/Edit Movie Div -->
-        <div class="editAdd col-3 container-fluid align-content-center">
-            <div class="card" id="addMovieCard">
-                <div class="card-body">
-                    <section id="addMovie" >
-                        <form id="addMovieForm">
-                            <label for="movie-title">Movie Title:</label>
-                            <input id="movie-title" type="text" placeholder=" Enter Movie Title" class="my-1">
-                            <label for="movie-rating">Movie Rating:</label>
-                            <input id="movie-rating" type="text" placeholder="Enter Movie Rating" class="my-1">
-                            <label for="movie-poster">Add Poster Image URL:</label>
-                            <input id="movie-poster" type="text" placeholder="Enter Poster Image URL" class="my-1">
-                            <label for="movie-year">Movie Release Year:</label>
-                            <input id="movie-year" type="text" placeholder="Enter Movie Release Year" class="my-1">
-                            <br>
-                            <label for="movie-genre">Movie Genre:</label>
-                            <input id="movie-genre" type="text" placeholder="Movie Genre" class="my-1">
-                            <label for="movie-director">Director of Movie:</label>
-                            <input id="movie-director" type="text" placeholder="Movie Director" class="my-1">
-                            <label for="movie-plot">Movie Plot Description:</label>
-                            <br>
-                            <input id="movie-plot" type="text" placeholder="Plot Description" class="my-1">
-                            <br>
-                            <label for="movie-actors">Movie Actors:</label>
-                            <input id="movie-actors" type="text" placeholder="Actor's Name" class="my-1">
-                        </form>
-                        <button id="newMovieBtn" class="btn-secondary my-2">Submit</button>
-                    </section>
-                </div>
+    <!--- Div containing Add & Edit Movie Divs -->
+    <div>
+        <div class="row">
+            <!-- Div That Will Display Movies -->
+            <div class=" card-deck col-6">
+                <main id="container" class="row"></main>
             </div>
+            <div class="editAdd col-3 container-fluid align-content-center">
+                <div class="card" id="addMovieCard">
+                    <div class="card-body">
+                        <section id="addMovie" >
+                            <form id="addMovieForm">
+                                <label for="movie-title">Movie Title:</label>
+                                <input id="movie-title" type="text" placeholder=" Enter Movie Title" class="my-1">
+                                <label for="movie-rating">Movie Rating:</label>
+                                <input id="movie-rating" type="text" placeholder="Enter Movie Rating" class="my-1">
+                                <label for="movie-poster">Add Poster Image URL:</label>
+                                <input id="movie-poster" type="text" placeholder="Enter Poster Image URL" class="my-1">
+                                <label for="movie-year">Movie Release Year:</label>
+                                <input id="movie-year" type="text" placeholder="Enter Movie Release Year" class="my-1">
+                                <br>
+                                <label for="movie-genre">Movie Genre:</label>
+                                <input id="movie-genre" type="text" placeholder="Movie Genre" class="my-1">
+                                <label for="movie-director">Director of Movie:</label>
+                                <input id="movie-director" type="text" placeholder="Movie Director" class="my-1">
+                                <label for="movie-plot">Movie Plot Description:</label>
+                                <br>
+                                <input id="movie-plot" type="text" placeholder="Plot Description" class="my-1">
+                                <br>
+                                <label for="movie-actors">Movie Actors:</label>
+                                <input id="movie-actors" type="text" placeholder="Actor's Name" class="my-1">
+                            </form>
+                            <button id="newMovieBtn" class="btn-secondary my-2">Submit</button>
+                        </section>
+                    </div>
+                </div>
 
-            <!-- Edit Div-->
-            <div class="editMovie card my-3">
-                <h3 class="mx-auto">Edit A Movie!</h3>
-                <div class="card-body editBorder">
-                    <select id="selectMenu"></select>
-                    <div class="" id="editMovie">
-                        <label for="newTitle">Change Title:</label>
-                        <br>
-                        <input type="text" id="newTitle" class="my-1">
-                        <label for="newRating">Change Rating:</label>
-                        <input type="text" id="newRating" class="my-1">
-                        <label for="newYear">Change Release Year:</label>
-                        <input type="text" id="newYear" class="my-1">
-                        <label for="newGenre">Change Genre:</label>
-                        <input type="text" id="newGenre" class="my-1">
-                        <label for="newDirector">Change Director:</label>
-                        <input type="text" id="newDirector" class="my-1">
-                        <label for="newActors">Change Actors:</label>
-                        <input type="text" id="newActors" class="my-1">
-                        <div class="w-100">
-                            <label for="newPlot">Change Plot:</label> <br>
-                            <textarea id="newPlot" rows="6" cols="24"></textarea>
+                <!-- Edit Div -->
+                <div class="editMovie card my-3">
+                    <h3 class="mx-auto">Edit A Movie!</h3>
+                    <div class="card-body editBorder">
+                        <select id="selectMenu"></select>
+                        <div class="" id="editMovie">
+                            <label for="newTitle">Change Title:</label>
+                            <br>
+                            <input type="text" id="newTitle" class="my-1">
+                            <label for="newRating">Change Rating:</label>
+                            <input type="text" id="newRating" class="my-1">
+                            <label for="newYear">Change Release Year:</label>
+                            <input type="text" id="newYear" class="my-1">
+                            <label for="newGenre">Change Genre:</label>
+                            <input type="text" id="newGenre" class="my-1">
+                            <label for="newDirector">Change Director:</label>
+                            <input type="text" id="newDirector" class="my-1">
+                            <label for="newActors">Change Actors:</label>
+                            <input type="text" id="newActors" class="my-1">
+                            <div class="w-100">
+                                <label for="newPlot">Change Plot:</label> <br>
+                                <textarea id="newPlot" rows="6" cols="24"></textarea>
+                            </div>
+                            <button id="changeMovie" class="btn-secondary my-3">Update Movie</button>
                         </div>
-                        <button id="changeMovie" class="btn-secondary my-3">Update Movie</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
-
-<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
-<script src="js/movies-project-cesar.js"></script>
+    <!-- JQuery and js Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="js/movies-project-cesar.js"></script>
 </body>
 </html>
