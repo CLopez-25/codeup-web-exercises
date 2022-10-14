@@ -639,18 +639,18 @@
 
 // When the user clicks on the "Hot Pink It" button, all the text in the div with the id of loremParagraphs becomes hotpink if it's black, or black if it's hotpink.
 
-const lorem = "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid assumenda consectetur cumque dignissimos eius, fugit hic ipsa, iste nemo obcaecati pariatur perferendis placeat possimus, praesentium repellendus similique sit ut vero?\n</p>";
-
-$("#loremParagraphs h2").mouseenter(function (){
-    $("#loremParagraphs").append(lorem);
-});
-
-$("#hotPinkIt").on('click', function (){
-    $("#loremParagraphs").toggleClass("hotpink");
-});
-
-$("#blinkPink").on('click', function (){
-    setInterval(function (){
-        $("#loremParagraphs").toggleClass("hotpink");
-    }, 3000);
-});
+// const lorem = "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid assumenda consectetur cumque dignissimos eius, fugit hic ipsa, iste nemo obcaecati pariatur perferendis placeat possimus, praesentium repellendus similique sit ut vero?\n</p>";
+//
+// $("#loremParagraphs h2").mouseenter(function (){
+//     $("#loremParagraphs").append(lorem);
+// });
+//
+// $("#hotPinkIt").on('click', function (){
+//     $("#loremParagraphs").toggleClass("hotpink");
+// });
+//
+// $("#blinkPink").on('click', function (){
+//     setInterval(function (){
+//         $("#loremParagraphs").toggleClass("hotpink");
+//     }, 3000);
+// });
