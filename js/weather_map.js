@@ -26,7 +26,7 @@ $(function () {
                             <li class="list-group-item">${data.list[i].main.temp}°F</li>
                             <li class="list-group-item">Description: ${data.list[i].weather[0].description}</li>
                             <li class="list-group-item">Humidity: ${data.list[i].main.humidity}</li>
-                            <li class="list-group-item">Wind: ${data.list[i].wind.speed}</li>
+                            <li class="list-group-item">Wind: ${data.list[i].wind.speed} mph</li>
                             <li class="list-group-item">Pressure: ${data.list[i].main.pressure}</li>
                         </ul>
                     </div>
